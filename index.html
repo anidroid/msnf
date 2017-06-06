@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+    <title>Social media</title>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/handlebars-v4.0.5.js"></script>
+    <script src="scripts/yaml.js"></script>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/routie.min.js"></script>
+    <script src="scripts/kinto-http.js"></script>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/alertify.js"></script>
+    <script src="scripts/dropdown.js"></script>
+    <script defer src="demo.js"></script>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/ripples.css" rel="stylesheet">
+    <link href="css/alertify.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+</head>
+
+<!--  START {}TEMPLATES  -->
+<script id="stimcomplete-partial" type="text/x-handlebars-template">
+</script>
+
+<script id="stim-template" type="text/x-handlebars-template">
+    <div class="story">
+        {{#each hbprofiles}} {{> stimcomplete}} {{/each}}
+    </div>
+    <div class="modresp">
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
+      <a class="btn btn-check btn-sm" href="#" role="button"><i class="fa fa-check-square-o" aria-hidden="true"></i> fact-check</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button" style="color:#c6c6c6"> pass on</a>
+    </div>
+</script>
+
+<script id="headlines-template" type="text/x-handlebars-template">
+    {{#each hbprofiles}}
+        <div class="card">
+            <div class="stim">
+                  <div class="title">{{title}}</div>
+                    <div class="info">{{source}} - {{date}}</div>
+                    <div class="text">{{text}}</div>
+                    <!--
+                    <div class="footer">
+                        <i class="fa fa-share" aria-hidden="true"></i>
+                        <i class="fa fa-retweet" aria-hidden="true"></i>
+                        <a class="btn btn-sm btn-like" href="#" role="button" data-liked={{ID}}><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                    </div>
+                    -->
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+<script id="sources-template" type="text/x-handlebars-template">
+        <div class="stim title">
+            {{hbprofiles}}
+        </div>
+</script>
+
+<script id="qtpre-template" type="text/x-handlebars-template">​
+  <div id="qtpre-text"></div>
+    {{#each qs}}
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="form-lbl">{{text}}</label>
+        <select class="form-control" id={{lab}}>
+         {{#each options}}
+          <option>{{lab}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <br />
+    </form>
+
+    {{/each}}
+    <a class="btn btn-block btn-lg btn-resp" href="#" role="button">Submit</a> ​
+</script>
+
+<script id="qtpre0-template" type="text/x-handlebars-template">​
+  {{#each qs}}
+  <h4>{{text}}</h4>
+      {{#each options}}
+      <a class="btn btn-raised btn-sm btn-resp1" href="#" role="button" data-resp={{this}}>{{this}}</a>
+      {{/each}}
+  <br />
+  {{/each}}
+  <a class="btn btn-block btn-lg btn-resp" href="#" role="button">Submit</a> ​
+</script>
+<script id="qt1-template" type="text/x-handlebars-template">​
+    <div class="qt1-choices">
+        {{#each options}}
+        <a class="btn btn-raised btn-sm btn-resp1" href="#" role="button" data-resp={{this}}>{{this}}</a> {{/each}}
+        <a class="btn btn-sm btn-resp1" href="#" role="button" data-resp="skip" style="background-color: transparent; border:0px">Skip (no idea)</a>
+    </div>
+​</script>
+<script id="qt2-template" type="text/x-handlebars-template">​
+    <div class="qt2-choices">
+        {{#each options}}
+        <a class="btn btn-raised btn-sm btn-resp2" href="#" role="button" data-resp={{this}}>{{this}}</a> {{/each}}
+    </div>
+​</script>
+<script id="qt3-template" type="text/x-handlebars-template">​
+    <div class="qt3-choices">
+        {{#each hbprofiles}}
+        <a class="btn btn-sm btn-resp3" href="#" role="button" data-resp={{COND2}}>{{> stimtarget}}</a> {{/each}}
+        <br>
+    </div>
+    ​</script>
+<script id="qt4-template" type="text/x-handlebars-template">​
+    <div class="q4-choices">
+        <h2>{{text}}</h2>
+        <h3><b>{{probe}}</b></h3>
+        <h4>{{instr}}</h4>
+        <br> {{#each options}}
+        <a class="btn btn-raised btn-options btn-sm" href="#" role="button" data-val={{val}}>{{lab}}</a> {{/each}}
+        <br>
+        <a class="btn btn-block btn-lg btn-resp" href="#" role="button">Submit</a>
+    </div>
+    ​</script>
+<script id="qt5-template" type="text/x-handlebars-template">​
+    <div class="form-group label-floating">
+        <label class="control-label" for="focusedInput1">{{text}}</label>
+        <input class="form-control" id="focusedInput1" type="text">
+    </div>
+    <a class="btn btn-block btn-lg btn-resp" href="#" role="button">Submit</a> ​
+</script>
+
+
+<!--  END TEMPLATES  -->
+
+
+<body>
+
+    <div class="container">
+        <!-- <div class="header clearfix">
+        <h3 class="text-muted">Project name</h3>
+      </div> -->
+
+      <div id="loader-wrapper" class="undercover">
+        <div id="loader" style="margin:auto">
+          Retrieving information. Please wait.
+          <br><br>
+          <img src='imgs/rolling.svg' />
+        </div>
+        <div id="fc-false" class="fcfb undercover">
+          {placeholder: 80% likely that this is false}
+        </div>
+        <div id="fc-true" class="fcfb undercover">
+          {placeholder: 80% likely that this is true}
+        </div>
+      </div>
+
+        <div class="undercover" id="stim">
+          aa
+        </div>
+
+        <div class="undercover" id="instr">
+            <div id="ctext"></div>
+            <div id="cresp">
+                <a class="btn btn-sm btn-block active btn-instr" href="#" role="button">next</a>
+            </div>
+        </div>
+
+        <div class="undercover q" id=qt1>
+            <div class="row">
+                <h2 class="col-sm-12" id="qt1text"></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="qt1stim"></div>
+                <div class='q probe' id="qt1probe"></div>
+                <div class='q' id="qt1resp"></div>
+            </div>
+        </div>
+        <div class="undercover q" id=qt3>
+            <div class="row">
+                <h2 class="col-sm-12" id="qt3text"></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="qt3stim"></div>
+                <div class='q probe' id="qt3probe"></div>
+                <div class='q' id="qt3resp"></div>
+            </div>
+        </div>
+        <div class="undercover q" id=qt2>
+            <div class="row">
+                <h2 class="col-sm-12" id="qt2text"></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="qt2stim"></div>
+                <div class='q' id="qt2probe"></div>
+                <div class='q' id="qt2resp"></div>
+            </div>
+
+        </div>
+
+        <div class="undercover" id=qq>
+
+        </div>
+
+        <div class="undercover" id=debrief>
+            <h3 id="dtext1"></h3>
+
+            <div id="dresp">
+                <a class="btn btn-lg btn-block active btn-end" href="#" role="button">SUBMIT</a>
+            </div>
+            <br>
+            <div id="dtext2"></div>
+        </div>
+
+    </div>
+    <!-- /container -->
+</body>
+
+</html>

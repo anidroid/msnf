@@ -1,0 +1,203 @@
+body {
+    padding-top: 100px;
+}
+
+#dispstim {
+    margin-bottom: 40px;
+}
+
+#qtpre-text{
+  font-weight:400;
+  font-size: 16;
+}
+.example {
+  padding:20px;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #f5f5f5;
+  border-color: lightgray !important;
+  border: 1px solid;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.example .card {
+  font-size:.8em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.example .q {
+    font-size:.8em !important;
+}
+.example img{
+        height:70px !important;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding-bottom:100px;
+}
+
+#intro {
+    font-size: 1.5em;
+    color: gray;
+    padding: 1em 0em 1em 0em;
+}
+
+#intro p {
+    font-size: .7em;
+}
+
+#qt1stim {
+   margin: 20px 0px 50px 0px;
+}
+
+#qt1probe {
+   margin: 0px 0px 0px 20px;
+}
+
+#qt2stim {
+    margin-top: 10px;
+    margin-bottom: 180px;
+}
+#qt2probe {
+    text-transform: lowercase;
+}
+
+#loader-wrapper{
+ z-index:999999;
+ display:block;
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background:  rgba(255, 255, 255, 0.82);
+}
+
+#loader{
+  padding: 200px 0;
+  text-align: center;
+  font-size:2em;
+  font-weight:400;
+}
+
+.fcfb{
+  background-color:white;
+  padding:50px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  margin: 200px 100px;
+  text-align: center;
+  font-size:2em;
+  font-weight:400;
+}
+.card {
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.stim {
+    position: relative;
+    padding: .8em;
+    padding-right: 1.3em;
+}
+
+.stim img {
+    height: 7em;
+    float: left;
+    margin: .5em;
+}
+
+.stim  .title {
+  font-size: 1.5em;
+  color: #2e2e91;
+  font-weight:500;}
+
+.stim  .info {
+    font-size: 0.8em;
+    color: #a1a1a1;
+    padding-bottom: 0.8em;
+}
+
+.stim  .text {
+    font-size: 1em;
+    margin-bottom: .8em;
+}
+
+.stim .footer {
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.stim .footer i {
+    font-size: 13px;
+    margin: 5px 0em 0px 20px;
+    position: table;
+    color: #e5e5e5;
+}
+
+.stim .disabled i {
+    font-size: 12px;
+    color: #e5e5e5 !important;
+}
+
+.stim .footer .btn-like {
+    font-size: 12px;
+    margin: 2px 0em 0px 20px;
+    padding: 0px 0px 0px 0px;
+    background-color: white !important;
+}
+
+.btn-like.focus {
+    background-color: #FFF !important;
+}
+
+.liked i {
+    color: #428bca !important;
+}
+
+.stim .footer .btn:hover {
+    background-color: transparent !important;
+}
+
+.stim .footer .btn i {
+    margin: 0px 0em 0px 0em;
+    color: #808080;
+}
+
+.stim .footer .btn:hover i {
+    color: #1976D2;
+}
+
+/* Q1 CSS */
+
+.q1-choices {
+    margin: 0 0 0 15px;
+}
+
+.q .btn {
+    font-size: 1em;
+}
+
+.selected {
+    background-color: #d3d3d3 !important;
+}
+
+.probe {
+    margin-top:20px;
+    padding-left: 15px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.btn-options {
+  text-align:left;
+  white-space:normal !important;
+  word-wrap:break-word;
+}
+#instr p{
+  font-size:1.2em;
+}
+
+#instr h3{
+    font-weight: bold;
+}
