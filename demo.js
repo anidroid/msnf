@@ -136,6 +136,8 @@
               routie('end', function() {
 
                   $('.undercover').hide();
+                  $('#debrief').show();
+                  $('#dtext1').empty().append($.parseHTML(design.instr.debriefing.text1));
                   pdat['END'] = Date.now();
                   pdat['DURATION'] = pdat['END'] - pdat['START'];
                   dat['PDAT'] = pdat

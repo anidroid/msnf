@@ -1472,7 +1472,7 @@ settings:
 instr:
   debriefing:
       id: 'debrief'
-      text1: 'Thank you! <br><br> You have completed the study. Your responses have been recorded. Your participation is an invaluable contribution, without which we will not be able to conduct this research. We would be happy to provide further details and insights, as well as answer any questions you might have: a.levordashka|at|iwm-tuebingen|dot|de. <br><br> '
+      text1: 'You are almost done. Please press submit to record your responses and be forwarded to a survey with a couple of final questions. If you see a warning asking you to confirm your action, select Leave.'
       text2: 'Should you wish to withdraw your data, you have the rights to do so in the next two weeks. To do so, email us with the following reference number: '
       text3: '. Please note that we need this reference number to remove your data. Without it, we will not be able to do so, since we have no other identifying information. Storing it is your responsibility.'
       retractdata: '<b>rdcode</b>'
@@ -1509,9 +1509,7 @@ blocks:
         <br><br>
         The sources and dates you see below the headlines are not reflect the original sources of the stories, but sites and dates on which they have been shared.
         <br><br>
-        There are no “right” or “wrong” answers. We are interested in your personal views.
-        Thus please answer each question quickly, based on your intuition.
-        Please do not use the Internet to look up the story or additional information; just rate the information as is is.
+        There are no “right” or “wrong” answers. We are interested in your personal views.Thus please answer each question quickly, based on your intuition. Please do not use the Internet to look up the headline or additional information; just rate the headline as it is.
         </h3><br>
 
     qinstr: >
