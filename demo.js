@@ -39,9 +39,9 @@
               test = QueryString['test']
 
               // gen stim
-              for (i = 0; i < design.stim[c].stories.length; i++) {
-                design.stim[c].stories[i].source = _.sample(design.stim[c].sources)
-                design.stim[c].stories[i].date = _.sample(design.stim[c].dates)
+              for (i = 0; i < design.stimpre[c].stories.length; i++) {
+                design.stimpre[c].stories[i].source = _.sample(design.stimpre[c].sources)
+                design.stimpre[c].stories[i].date = _.sample(design.stimpre[c].dates)
               }
 
               // add partials
@@ -58,7 +58,7 @@
 
               routie('instr/?:b', function(b) {
                   b = parseInt(b)
-                  order = _.shuffle(_.range(design.stim[c][design.blocks[b].stim].length))
+                  order = _.shuffle(_.range(design.stimpre[c][design.blocks[b].stim].length))
                   if(test=="true") {
                     console.log('testtrue')
                     order = _.shuffle(_.range(2))
@@ -83,7 +83,7 @@
 
                 $('#stim').show();
                 hb = Handlebars.compile($('#'+design.blocks[b].stimlayout+"-template").html());
-                $('#stim').html(hb({'hbprofiles': [design.stim[c][design.blocks[b].stim][curr]]}));
+                $('#stim').html(hb({'hbprofiles': [design.stimpre[c][design.blocks[b].stim][curr]]}));
 
                 $('#qq').show();
                 hb = Handlebars.compile($("#qtpre-template").html());
@@ -101,13 +101,13 @@
                       switch(b){
                           case 0:
                               tdat['ORDER'] = t;
-                              tdat['SID'] = design.stim[c].stories[curr].id;
-                              tdat['SRC'] = design.stim[c].stories[curr].source;
+                              tdat['SID'] = design.stimpre[c].stories[curr].id;
+                              tdat['SRC'] = design.stimpre[c].stories[curr].source;
                               tdat['Q_'+lab] = res;
                           break;
                           case 1:
                               tdat['ORDER'] = t;
-                              tdat['SRC'] = design.stim[c].sources[curr];
+                              tdat['SRC'] = design.stimpre[c].sources[curr];
                               tdat['Q_'+lab] = res;
                           break;
                           default:
@@ -146,6 +146,16 @@
                   $('.btn-end').off('click').on('click', function() {
                       window.location.replace(design.settings.endredirect+pdat.QID)
                   });
+              });
+
+              routie('debrief', function() {
+
+                  $('.undercover').hide();
+
+                  $('#stim').show();
+                  hb = Handlebars.compile($('#debrief-template').html());
+                  $('#stim').html(hb({'hbprofiles': design.stim.stories}));
+
               });
 
       }

@@ -5,7 +5,12 @@ body {
 #dispstim {
     margin-bottom: 40px;
 }
-
+.true .card  {
+  background-color:#4caf50;
+}
+.false .card  {
+  background-color:#f44336;
+}
 #qtpre-text{
   font-weight:400;
   font-size: 16;

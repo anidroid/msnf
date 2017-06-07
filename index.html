@@ -83,6 +83,18 @@
     <a class="btn btn-block btn-lg btn-resp" href="#" role="button">Submit</a> ​
 </script>
 
+<script id="debrief-template" type="text/x-handlebars-template">
+    {{#each hbprofiles}}
+    <div class={{veracity}}>
+        <div class="card row">
+            <h4 class="col-sm-9" >{{title}}</h4>
+            <h4 class="col-sm-3" style="position:relative; font-weight:500; font-size:2.5em; text-align:right">{{veracity}}</h4>
+          </div>
+    </div>
+    {{/each}}
+</script>
+
+
 <script id="qtpre0-template" type="text/x-handlebars-template">​
   {{#each qs}}
   <h4>{{text}}</h4>
