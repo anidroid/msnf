@@ -918,47 +918,6 @@ blocks:
               val: 99
               lab: Absolutely no idea
         -
-          text: 'well-written:'
-          lab: 'wellwr'
-          options:
-            -
-              val: 55
-              lab: Please select...
-            -
-              val: 1
-              lab: Health Care and Social Assistance
-            -
-              val: 3
-              lab: Retail
-            -
-              val: 4
-              lab: College, University, and Adult Education
-            -
-              val: 5
-              lab: Information Services and Data Processing
-            -
-              val: 6
-              lab: Finance and Insurance
-            -
-              val: 7
-              lab: Government and Public Administration
-            -
-              val: 8
-              lab: Scientific or Technical Services
-            -
-              val: 2
-              lab: Software
-            -
-              val: 9
-              lab: Hotel and Food Services
-            -
-              val: 10
-              lab: Other
-            -
-              val: 99
-              lab: Rather not say
-
-        -
           text: 'How much would you expect this story to appeal to people with liberal views?'
           lab: 'liberalappeal'
           options:
