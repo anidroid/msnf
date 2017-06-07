@@ -3,9 +3,9 @@
           $('.undercover').hide();
 
           if (QueryString['c']) {
-              var cond = window.decode(window.QueryString.c)
+              var c = window.decode(window.QueryString.c)
           } else {
-              cond = _.sample([1,2])
+              c = _.sample([0,1])
           };
 
           if (QueryString['d']) {
@@ -33,13 +33,15 @@
               var kdat = db.bucket(bucket_name).collection(collection_name);
 
               pdat = {}
-              pdat.QID = QueryString['id']
               dat = []
 
+              pdat.QID = QueryString['id']
+              test = QueryString['test']
+
               // gen stim
-              for (i = 0; i < design.stim.stories.length; i++) {
-                design.stim.stories[i].source = _.sample(design.stim.sources)
-                design.stim.stories[i].date = _.sample(design.stim.dates)
+              for (i = 0; i < design.stim[c].stories.length; i++) {
+                design.stim[c].stories[i].source = _.sample(design.stim[c].sources)
+                design.stim[c].stories[i].date = _.sample(design.stim[c].dates)
               }
 
               // add partials
@@ -56,7 +58,11 @@
 
               routie('instr/?:b', function(b) {
                   b = parseInt(b)
-                  order = _.shuffle(_.range(design.stim[design.blocks[b].stim].length))
+                  order = _.shuffle(_.range(design.stim[c][design.blocks[b].stim].length))
+                  if(test=="true") {
+                    console.log('testtrue')
+                    order = _.shuffle(_.range(2))
+                  }
                   bdat = {}
                   $('.undercover').hide();
                   $('#instr').show();
@@ -77,7 +83,7 @@
 
                 $('#stim').show();
                 hb = Handlebars.compile($('#'+design.blocks[b].stimlayout+"-template").html());
-                $('#stim').html(hb({'hbprofiles': [design.stim[design.blocks[b].stim][curr]]}));
+                $('#stim').html(hb({'hbprofiles': [design.stim[c][design.blocks[b].stim][curr]]}));
 
                 $('#qq').show();
                 hb = Handlebars.compile($("#qtpre-template").html());
@@ -87,7 +93,7 @@
                 $('.btn-resp').off('click').on('click', function() {
                   for (i = 0; i < $('.form-control').length; i++) {
                     if($('.form-control')[i].value === "Please select..."){
-                      window.reqresp = alertify.error("Please respond to question "+i);
+                      window.reqresp = alertify.error("Please respond to question "+(i+1));
                       var proceed = false;
                     } else {
                       lab = $('.form-control')[i].id
@@ -95,19 +101,20 @@
                       switch(b){
                           case 0:
                               tdat['ORDER'] = t;
-                              tdat['SID'] = design.stim.stories[curr].id;
-                              tdat['SRC'] = design.stim.stories[curr].source;
+                              tdat['SID'] = design.stim[c].stories[curr].id;
+                              tdat['SRC'] = design.stim[c].stories[curr].source;
                               tdat['Q_'+lab] = res;
                           break;
                           case 1:
                               tdat['ORDER'] = t;
-                              tdat['SRC'] = design.stim.sources[curr];
+                              tdat['SRC'] = design.stim[c].sources[curr];
                               tdat['Q_'+lab] = res;
                           break;
                           default:
                           console.log('err')
                       }
                       bdat[t] = tdat
+                      dat[design.blocks[b].id] = bdat
                     }
                   }
                   if(proceed!=false){
@@ -115,7 +122,6 @@
                       routie('run/'+b+'/'+(t+1))
                     } else {
                       if(b < design.blocks.length-1){
-                        dat[design.blocks[b].id] = bdat
                         routie('instr/'+(b+1))
                       } else {
                         routie('end')
@@ -138,7 +144,7 @@
                       console.log('saved data on server')
                   })
                   $('.btn-end').off('click').on('click', function() {
-                      window.location.replace(design.endredirect)
+                      window.location.replace(design.settings.endredirect+pdat.QID)
                   });
               });
 
