@@ -7,9 +7,11 @@ body {
 }
 .true .card  {
   color:#4caf50;
+  background-color:#d3eed3;
 }
 .false .card  {
   color:#f44336;
+  background-color:#fae3e2;
 }
 #qtpre-text{
   font-weight:400;

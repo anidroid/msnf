@@ -36,6 +36,8 @@
               dat = []
 
               pdat.QID = QueryString['id']
+              pdat.SRC = QueryString['s']
+              pdat.CND = c
               test = QueryString['test']
 
               // gen stim
