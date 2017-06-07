@@ -6,10 +6,10 @@ body {
     margin-bottom: 40px;
 }
 .true .card  {
-  background-color:#4caf50;
+  color:#4caf50;
 }
 .false .card  {
-  background-color:#f44336;
+  color:#f44336;
 }
 #qtpre-text{
   font-weight:400;
