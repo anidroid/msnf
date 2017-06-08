@@ -141,7 +141,7 @@
                   pdat['END'] = Date.now();
                   pdat['DURATION'] = pdat['END'] - pdat['START'];
                   datsave = {
-                      data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,participants:PDAT}),
+                      data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,participants:pdat}),
                   }
                   kdat.createRecord(datsave).then(function(res) {
                       console.log('saved data on server')
