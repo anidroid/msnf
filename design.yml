@@ -1421,7 +1421,7 @@ stimpre:
       topic: NM
       keyword: tech
       veracity: true
-      title: "Electric shocks 'improve' dried herbs taste"      
+      title: "Electric shocks 'improve' dried herbs taste"
     sources:
       - GlossyNews
       - LifeNews
@@ -1498,7 +1498,7 @@ instr:
     </p>
 blocks:
   -
-    id: HDL
+    id: headlines
     each: true
     stimT: 1
     randomized: true
@@ -1688,7 +1688,7 @@ blocks:
               val: 99
               lab: Absolutely no idea
   -
-    id: SRC
+    id: sources
     each: true
     stimT: 1
     randomized: true

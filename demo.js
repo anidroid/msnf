@@ -140,9 +140,8 @@
                   $('#dtext1').empty().append($.parseHTML(design.instr.debriefing.text1));
                   pdat['END'] = Date.now();
                   pdat['DURATION'] = pdat['END'] - pdat['START'];
-                  dat['PDAT'] = pdat
                   datsave = {
-                      data: JSON.stringify([dat]),
+                      data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,participants:PDAT}),
                   }
                   kdat.createRecord(datsave).then(function(res) {
                       console.log('saved data on server')
