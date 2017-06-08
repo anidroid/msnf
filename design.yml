@@ -724,24 +724,6 @@ stimpre:
   -
     stories:
      -
-      id: 55
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "Trump has a Civil War memorial on his DC golf course — for a battle that never happened"
-     -
-      id: 56
-      topic: PC
-      keyword: military
-      veracity: true
-      title: "North Korea warns of 'bigger gift package' for U.S. after latest test"
-     -
-      id: 57
-      topic: NM
-      keyword: tech
-      veracity: true
-      title: "Electric shocks 'improve' dried herbs taste"
-     -
       id: 58
       topic: PL
       keyword: social
@@ -1422,6 +1404,24 @@ stimpre:
       keyword: social
       veracity: true
       title: "Canada, Norway, and Germany offer federally paid family leave programs for up  to 1 year"
+     -
+      id: 55
+      topic: PL
+      keyword: trump
+      veracity: true
+      title: "Trump has a Civil War memorial on his DC golf course — for a battle that never happened"
+     -
+      id: 56
+      topic: PC
+      keyword: military
+      veracity: true
+      title: "North Korea warns of 'bigger gift package' for U.S. after latest test"
+     -
+      id: 57
+      topic: NM
+      keyword: tech
+      veracity: true
+      title: "Electric shocks 'improve' dried herbs taste"      
     sources:
       - GlossyNews
       - LifeNews
