@@ -141,13 +141,13 @@
                   pdat['END'] = Date.now();
                   pdat['DURATION'] = pdat['END'] - pdat['START'];
                   datsave = {
-                      data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,participants:pdat}),
+                      data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,person:pdat}),
                   }
                   kdat.createRecord(datsave).then(function(res) {
                       console.log('saved data on server')
                   })
                   $('.btn-end').off('click').on('click', function() {
-                      window.location.replace(design.settings.endredirect+pdat.QID)
+                      window.location.replace(design.settings.endredirect+pdat.QID+'&s='+pdat.SRC)
                   });
               });
 
