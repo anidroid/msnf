@@ -47,13 +47,14 @@
                 design.stim.stories[i].date = _.sample(design.stim.dates)
               }
 
+              // Determine which block to display, based on condition
               switch(c){
                   case "0":
-                    window.stimuli = _.first(design.stim.stories,55)
+                    window.stimuli = _.first(design.stim.stories,54)
                     design.blocks = [design.blocks[0]]
                   break;
                   case "1":
-                    window.stimuli = _.last(design.stim.stories,55)
+                    window.stimuli = _.last(design.stim.stories,54)
                     design.blocks = [design.blocks[0]]
                   break;
                   case "2":

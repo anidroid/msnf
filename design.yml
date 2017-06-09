@@ -767,7 +767,7 @@ blocks:
     qs:
         -
           text: 'credible:'
-          lab: 'cred'
+          lab: 'credible'
           options:
             -
               val: 55
@@ -789,7 +789,7 @@ blocks:
               lab: Not at all credible
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'relevant:'
           lab: 'relevant'
@@ -814,7 +814,7 @@ blocks:
               lab: Not at all relevant
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'entertaining:'
           lab: 'entertaining'
@@ -839,10 +839,10 @@ blocks:
               lab: Not at all entertaining
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'interesting:'
-          lab: 'inter'
+          lab: 'interesting'
           options:
             -
               val: 55
@@ -864,10 +864,10 @@ blocks:
               lab: Not at all interesting
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'How much would you expect this story to appeal to people with liberal views?'
-          lab: 'liberalappeal'
+          lab: 'appeallib'
           options:
             -
               val: 55
@@ -889,10 +889,10 @@ blocks:
               lab: Not at all appealing to people with liberal views
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'How much would you expect this story to appeal to people with conservative views?'
-          lab: 'liberalappeal'
+          lab: 'appealcon'
           options:
             -
               val: 55
@@ -914,7 +914,7 @@ blocks:
               lab: Not at all appealing to people with conservative views
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'Do you think this story is likely to be factually correct?'
           lab: 'fake'
@@ -936,7 +936,7 @@ blocks:
               lab: Definitely fake
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
   -
     id: sources
     each: true
@@ -983,10 +983,10 @@ blocks:
               lab: Not at all familiar
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'How credible would you expect this news site?'
-          lab: 'cred'
+          lab: 'credible'
           options:
             -
               val: 55
@@ -1008,10 +1008,10 @@ blocks:
               lab: Not at all credible
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'How much would you expect this news site to appeal to people with liberal views?'
-          lab: 'liberalappeal'
+          lab: 'appeallib'
           options:
             -
               val: 55
@@ -1033,10 +1033,10 @@ blocks:
               lab: Not at all appealing to people with liberal views
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
         -
           text: 'How much would you expect this news site to appeal to people with conservative views?'
-          lab: 'liberalappeal'
+          lab: 'appealcon'
           options:
             -
               val: 55
@@ -1058,4 +1058,4 @@ blocks:
               lab: Not at all appealing to people with conservative views
             -
               val: 99
-              lab: Absolutely no idea
+              lab: Absolutely unable to judge
