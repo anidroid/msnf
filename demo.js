@@ -5,8 +5,9 @@
           if (QueryString['c']) {
               var c = window.decode(window.QueryString.c)
           } else {
-              c = _.sample([0,1])
+              c = _.sample(["0","1","2"])
           };
+          console.log(c)
 
           if (QueryString['d']) {
               var designsrc = window.decode(window.QueryString.d)
@@ -41,9 +42,26 @@
               test = QueryString['test']
 
               // gen stim
-              for (i = 0; i < design.stimpre[c].stories.length; i++) {
-                design.stimpre[c].stories[i].source = _.sample(design.stimpre[c].sources)
-                design.stimpre[c].stories[i].date = _.sample(design.stimpre[c].dates)
+              for (i = 0; i < design.stim.stories.length; i++) {
+                design.stim.stories[i].source = _.sample(design.stim.sources)
+                design.stim.stories[i].date = _.sample(design.stim.dates)
+              }
+
+              switch(c){
+                  case "0":
+                    window.stimuli = _.first(design.stim.stories,55)
+                    design.blocks = [design.blocks[0]]
+                  break;
+                  case "1":
+                    window.stimuli = _.last(design.stim.stories,55)
+                    design.blocks = [design.blocks[0]]
+                  break;
+                  case "2":
+                    window.stimuli = design.stim.sources
+                    design.blocks = [design.blocks[1]]
+                  break;
+                  default:
+                    console.log('err')
               }
 
               // add partials
@@ -60,7 +78,7 @@
 
               routie('instr/?:b', function(b) {
                   b = parseInt(b)
-                  order = _.shuffle(_.range(design.stimpre[c][design.blocks[b].stim].length))
+                  order = _.shuffle(_.range(stimuli.length))
                   if(test=="true") {
                     console.log('testtrue')
                     order = _.shuffle(_.range(2))
@@ -85,7 +103,7 @@
 
                 $('#stim').show();
                 hb = Handlebars.compile($('#'+design.blocks[b].stimlayout+"-template").html());
-                $('#stim').html(hb({'hbprofiles': [design.stimpre[c][design.blocks[b].stim][curr]]}));
+                $('#stim').html(hb({'hbprofiles': [stimuli[curr]]}));
 
                 $('#qq').show();
                 hb = Handlebars.compile($("#qtpre-template").html());
@@ -103,13 +121,19 @@
                       switch(b){
                           case 0:
                               tdat['ORDER'] = t;
-                              tdat['SID'] = design.stimpre[c].stories[curr].id;
-                              tdat['SRC'] = design.stimpre[c].stories[curr].source;
+                              tdat['SID'] = stimuli[curr].id;
+                              tdat['SRC'] = stimuli[curr].source;
                               tdat['Q_'+lab] = res;
                           break;
                           case 1:
                               tdat['ORDER'] = t;
-                              tdat['SRC'] = design.stimpre[c].sources[curr];
+                              tdat['SID'] = stimuli[curr].id;
+                              tdat['SRC'] = stimuli[curr].source;
+                              tdat['Q_'+lab] = res;
+                          break;
+                          case 2:
+                              tdat['ORDER'] = t;
+                              tdat['SRC'] = stimuli[curr];
                               tdat['Q_'+lab] = res;
                           break;
                           default:
