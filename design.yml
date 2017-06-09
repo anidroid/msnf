@@ -719,6 +719,7 @@ settings:
   server:
     remote_adr: "https://janmatthis.de/v1"
     collection: "misinfopretest"
+    collectiontest: "misinfopretesttest"
 instr:
   debriefing:
       id: 'debrief'
@@ -945,10 +946,9 @@ blocks:
     stim: sources
     stimlayout: sources
     instr: >
-        <h3>You will see the names of various news sharing sites.
+        <h3>You will see the names of various news sharing sites and we will ask you to evaluate each.
         <br><br>
         They are not the original sources of news, but sites that share stories reported in existing news outlets.
-        We will ask you to evaluate each site.
         <br><br>
         Keep in mind that there are no “right” or “wrong” answers. We are interested in your personal views.
         Thus please answer each question quickly, based on your intuition.
