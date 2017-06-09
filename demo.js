@@ -118,7 +118,7 @@
                     } else {
                       lab = $('.form-control')[i].id
                       res = $('.form-control')[i].value
-                      switch(b){
+                      switch(c){
                           case 0:
                               tdat['ORDER'] = t;
                               tdat['SID'] = stimuli[curr].id;
