@@ -42,13 +42,13 @@ $(document).ready(function() {
         var kdat = db.bucket(bucket_name).collection(collection_name);
 
         // creating empty data objects
-        pdat = {}
         dat = []
+        pdat = {}
 
         // entering the following variables to participant data
-        pdat.pnid = QueryString['id'] //anonymous participant id, linking across data files
-        pdat.pnsrc = QueryString['s'] //source of data collection: e.g., prolific
-        pdat.cond = c // condition
+        pdat['pnid'] = QueryString['id'] //anonymous participant id, linking across data files
+        pdat['pnsrc'] = QueryString['s'] //source of data collection: e.g., prolific
+        pdat['cond'] = c // condition
 
         // pairing each story with random source and date
         for (i = 0; i < design.stim.stories.length; i++) {
@@ -76,17 +76,23 @@ $(document).ready(function() {
 
         routie('init', function() {
             routie('instr/0')
-            pdat['START'] = Date.now()
+            pdat['start'] = Date.now()
         });
 
         routie('instr/?:b', function(b) {
             b = parseInt(b)
+
+            // set random trial order for all stimuli
             order = _.shuffle(_.range(stimuli.length))
+
+            // if in test mode, set fewer trials
             if(test=="true") {
-              console.log('testtrue')
               order = _.shuffle(_.range(2))
             }
-            bdat = {}
+
+            // clear block data object
+            bdat = []
+
             $('.undercover').hide();
             $('#instr').show();
             $('#ctext').empty().append($.parseHTML(design.blocks[b].instr));
@@ -94,7 +100,7 @@ $(document).ready(function() {
                 $('#instr').hide();
                 routie('run/'+b+'/0')
             });
-            pdat['START'] = Date.now()
+
         });
 
         routie('run/?:b/?:t', function(b,t) {
@@ -103,7 +109,6 @@ $(document).ready(function() {
           t = parseInt(t)
           curr = order[t]
           tdat = {}
-
           $('#stim').show();
           hb = Handlebars.compile($('#'+design.blocks[b].stimlayout+"-template").html());
           $('#stim').html(hb({'hbprofiles': [stimuli[curr]]}));
@@ -115,38 +120,42 @@ $(document).ready(function() {
 
           $('.btn-resp').off('click').on('click', function() {
             for (i = 0; i < $('.form-control').length; i++) {
+              // require response
               if($('.form-control')[i].value === "Please select..."){
                 window.reqresp = alertify.error("Please respond to question "+(i+1));
                 var proceed = false;
               } else {
+                // save trial responses to trial data
                 lab = $('.form-control')[i].id
                 res = $('.form-control')[i].value
                 switch(c){
                     case "0":
-                        tdat['ORDER'] = t;
-                        tdat['SID'] = stimuli[curr].id;
-                        tdat['SRC'] = stimuli[curr].source;
-                        tdat['Q_'+lab] = res;
+                        tdat['order'] = t;
+                        tdat['stimid'] = stimuli[curr].id;
+                        tdat['src'] = stimuli[curr].source;
+                        tdat['resp_'+lab] = res;
                     break;
                     case "1":
-                        tdat['ORDER'] = t;
-                        tdat['SID'] = stimuli[curr].id;
-                        tdat['SRC'] = stimuli[curr].source;
-                        tdat['Q_'+lab] = res;
+                        tdat['order'] = t;
+                        tdat['stimid'] = stimuli[curr].id;
+                        tdat['src'] = stimuli[curr].source;
+                        tdat['resp_'+lab] = res;
                     break;
                     case "2":
-                        tdat['ORDER'] = t;
-                        tdat['SRC'] = stimuli[curr];
-                        tdat['Q_'+lab] = res;
+                        tdat['order'] = t;
+                        tdat['src'] = stimuli[curr];
+                        tdat['resp_'+lab] = res;
                     break;
                     default:
                     console.log('err')
                 }
-                bdat[t] = tdat
-                dat[design.blocks[b].id] = bdat
+                //push trial data to block data
               }
             }
             if(proceed!=false){
+              bdat.push(tdat)
+              tdat={}
+              dat[design.blocks[b].id] = bdat
               if(t < order.length-1) {
                 routie('run/'+b+'/'+(t+1))
               } else {
@@ -165,10 +174,12 @@ $(document).ready(function() {
             $('.undercover').hide();
             $('#debrief').show();
             $('#dtext1').empty().append($.parseHTML(design.instr.debriefing.text1));
-            pdat['END'] = Date.now();
-            pdat['DURATION'] = pdat['END'] - pdat['START'];
+            pdat['end'] = Date.now();
+            pdat['duration'] = pdat['end'] - pdat['start'];
+            dat.person = [pdat]
+            console.log('hi')
             datsave = {
-                data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,person:pdat}),
+                data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,person:dat.person}),
             }
             kdat.createRecord(datsave).then(function(res) {
                 console.log('saved data on server')

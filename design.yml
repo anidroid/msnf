@@ -946,7 +946,7 @@ blocks:
     stim: sources
     stimlayout: sources
     instr: >
-        <h3>You will see the names of various news sharing sites and we will ask you to evaluate each.
+        <h3>You will see the names of news sharing sites and we will ask you to evaluate each.
         <br><br>
         They are not the original sources of news, but sites that share stories reported in existing news outlets.
         <br><br>
