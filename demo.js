@@ -31,7 +31,7 @@ $(document).ready(function() {
         if (test=="true"){
           collection_name = design.settings.server.collectiontest;
         }
-        var pn = _.sample(_.range(1, 9999), 1).toString();
+        var pn = _.random(1, 999999).toString();
         var pn_token = makeid(); // generate random string
         var db = new KintoClient(remote_adr, {
             bucket: bucket_name,
@@ -46,7 +46,11 @@ $(document).ready(function() {
         pdat = {}
 
         // entering the following variables to participant data
-        pdat['pnid'] = QueryString['id'] //anonymous participant id, linking across data files
+        if (QueryString['id']) {
+          pdat['pnid'] = QueryString['id'] //anonymous participant id, linking across data files
+        } else {
+          pdat['pnid'] = pn //anonymous participant id, linking across data files
+        }
         pdat['pnsrc'] = QueryString['s'] //source of data collection: e.g., prolific
         pdat['cond'] = c // condition
 
@@ -177,7 +181,6 @@ $(document).ready(function() {
             pdat['end'] = Date.now();
             pdat['duration'] = pdat['end'] - pdat['start'];
             dat.person = [pdat]
-            console.log('hi')
             datsave = {
                 data: JSON.stringify({headlines:dat.headlines,sources:dat.sources,person:dat.person}),
             }
@@ -185,7 +188,7 @@ $(document).ready(function() {
                 console.log('saved data on server')
             })
             $('.btn-end').off('click').on('click', function() {
-                window.location.replace(design.settings.endredirect+pdat.QID+'&s='+pdat.SRC)
+                window.location.replace(design.settings.endredirect+pdat.pnid+'&s='+pdat.pnsrc)
             });
         });
 
