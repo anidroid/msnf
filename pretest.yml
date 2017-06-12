@@ -13,24 +13,6 @@ stim:
       veracity: true
       title: "WhiteHouse.gov web site removes the terms 'LGBT' and 'climate change'"
      -
-      id: 2
-      topic: PL
-      keyword: climate
-      veracity:  false
-      title: "California Introduces Law To Jail Anyone Who Questions Man-Made Climate Change: First Amendment Now Dead"
-     -
-      id: 3
-      topic: PC
-      keyword: climate
-      veracity: false
-      title: "Exposed: How world leaders were duped into investing billions over manipulated global warming data"
-     -
-      id: 4
-      topic: PC
-      keyword: gun
-      veracity: false
-      title: "A longtime anti-gun state legislator shot a home intruder in defense of his property"
-     -
       id: 5
       topic: PC
       keyword:
@@ -67,24 +49,6 @@ stim:
       veracity: true
       title: "Last year, 244 suspected terrorists walked into gun shops and attempted to purchase a firearm; 223 were able to get the firearm."
      -
-      id: 13
-      topic: PL
-      keyword: true
-      veracity: true
-      title: "The people who get the death penalty tend to live in places with overaggressive prosecutors and defense lawyers who aren’t up to the task of defending against them — that’s a double whammy."
-     -
-      id: 14
-      topic: PL
-      keyword: true
-      veracity: true
-      title: "Ninety percent of Americans want our background check system strengthened and expanded to cover more gun sales."
-     -
-      id: 15
-      topic: PL
-      keyword: immigration
-      veracity: true
-      title: "The United States only accepted fewer than 1,700 Syrian refugees in fiscal year 2015."
-     -
       id: 16
       topic: PL
       keyword: social
@@ -96,30 +60,6 @@ stim:
       keyword: social
       veracity: true
       title: "The European Commission is preparing to rule in the next few weeks on whether Apple owes the Irish government billions in underpaid taxes."
-     -
-      id: 18
-      topic: PL
-      keyword: economy
-      veracity: false
-      title: "Our economy is much stronger now than 10 years ago. Nearly 15 million new private-sector jobs"
-     -
-      id: 19
-      topic: PL
-      keyword: immigration
-      veracity: false
-      title: "Two million more Latinos are in poverty today than eight years ago."
-     -
-      id: 20
-      topic: PL
-      keyword: gov
-      veracity: false
-      title: "Every Republican nominee since Richard Nixon, who at one time was under an audit, has released their tax documents"
-     -
-      id: 21
-      topic: PL
-      keyword: immigration
-      veracity: false
-      title: "Undocumented immigrants pay $12 billion a year into Social Security."
      -
       id: 22
       topic: PL
@@ -156,30 +96,6 @@ stim:
       keyword: military
       veracity: false
       title: "China is going to have twice the number of submarines we have in just over a decade."
-     -
-      id: 28
-      topic: PC
-      keyword: immigration
-      veracity: false
-      title: "The 2013 immigration bill expanded President Obama’s ability to bring Syrian refugees to this country without mandating any meaningful background checks."
-     -
-      id: 30
-      topic: PC
-      keyword: gun
-      veracity: false
-      title: "Under the current procedure, if someone on a terror watch list tries to buy a gun, authorities are always notified"
-     -
-      id: 31
-      topic: PC
-      keyword: military
-      veracity: false
-      title: "Ukraine voluntarily gives up nuclear weapons after United States promises to 'ensure (its) territorial integrity from Russia.'"
-     -
-      id: 32
-      topic: PC
-      keyword: military
-      veracity: false
-      title: "Today, it is more difficult to enlist in the U.S. military than it is to enroll in college"
      -
       id: 33
       topic: PC
@@ -649,6 +565,90 @@ stim:
       keyword: clinton
       veracity: true
       title: "'Prison labor excerpt from Hillary Clinton's 1996 book resurfaces, shocks supporters"
+     -
+      id: 2
+      topic: PL
+      keyword: climate
+      veracity:  false
+      title: "California Introduces Law To Jail Anyone Who Questions Man-Made Climate Change: First Amendment Now Dead"
+     -
+      id: 3
+      topic: PC
+      keyword: climate
+      veracity: false
+      title: "Exposed: How world leaders were duped into investing billions over manipulated global warming data"
+     -
+      id: 4
+      topic: PC
+      keyword: gun
+      veracity: false
+      title: "A longtime anti-gun state legislator shot a home intruder in defense of his property"
+     -
+      id: 28
+      topic: PC
+      keyword: immigration
+      veracity: false
+      title: "The 2013 immigration bill expanded President Obama’s ability to bring Syrian refugees to this country without mandating any meaningful background checks."
+     -
+      id: 30
+      topic: PC
+      keyword: gun
+      veracity: false
+      title: "Under the current procedure, if someone on a terror watch list tries to buy a gun, authorities are always notified"
+     -
+      id: 31
+      topic: PC
+      keyword: military
+      veracity: false
+      title: "Ukraine voluntarily gives up nuclear weapons after United States promises to 'ensure (its) territorial integrity from Russia.'"
+     -
+      id: 32
+      topic: PC
+      keyword: military
+      veracity: false
+      title: "Today, it is more difficult to enlist in the U.S. military than it is to enroll in college"
+     -
+      id: 13
+      topic: PL
+      keyword: true
+      veracity: true
+      title: "The people who get the death penalty tend to live in places with overaggressive prosecutors and defense lawyers who aren’t up to the task of defending against them — that’s a double whammy."
+     -
+      id: 14
+      topic: PL
+      keyword: true
+      veracity: true
+      title: "Ninety percent of Americans want our background check system strengthened and expanded to cover more gun sales."
+     -
+      id: 15
+      topic: PL
+      keyword: immigration
+      veracity: true
+      title: "The United States only accepted fewer than 1,700 Syrian refugees in fiscal year 2015."
+     -
+      id: 18
+      topic: PL
+      keyword: economy
+      veracity: false
+      title: "Our economy is much stronger now than 10 years ago. Nearly 15 million new private-sector jobs"
+     -
+      id: 19
+      topic: PL
+      keyword: immigration
+      veracity: false
+      title: "Two million more Latinos are in poverty today than eight years ago."
+     -
+      id: 20
+      topic: PL
+      keyword: gov
+      veracity: false
+      title: "Every Republican nominee since Richard Nixon, who at one time was under an audit, has released their tax documents"
+     -
+      id: 21
+      topic: PL
+      keyword: immigration
+      veracity: false
+      title: "Undocumented immigrants pay $12 billion a year into Social Security."   
   sources:
       - GlossyNews
       - LifeNews

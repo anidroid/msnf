@@ -724,8 +724,6 @@ instr:
   debriefing:
       id: 'debrief'
       text1: 'You are almost done. Please press submit to record your responses and be forwarded to a survey with a couple of final questions. If you see a warning asking you to confirm your action, select Leave.'
-      text2: 'Should you wish to withdraw your data, you have the rights to do so in the next two weeks. To do so, email us with the following reference number: '
-      text3: '. Please note that we need this reference number to remove your data. Without it, we will not be able to do so, since we have no other identifying information. Storing it is your responsibility.'
       retractdata: '<b>rdcode</b>'
       platform:
         -
@@ -764,10 +762,10 @@ blocks:
         <br><br>
         For each story, you can take one of the following actions:
         <div style="font-size:0.85em">
-        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-size:400"> BAN</span> The submission will not appear in the discussion group<br>
-        <i class="fa fa-check" aria-hidden="true"></i><span style="font-size:400"> ALLOW</span> The story will become available for users to read and share<br>
-        <i class="fa fa-star" aria-hidden="true"></i><span style="font-size:400"> RECOMMEND</span> The story will be highlighted and recommended to users<br>
-        <strong>SKIP</strong> If completely uncertain, you can skip the story and pass it on to another curator
+        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-weight:400"> BAN</span> The submission will not appear in the discussion group<br>
+        <i class="fa fa-check" aria-hidden="true"></i><span style="font-weight:400"> ALLOW</span> The story will become available for users to read and share<br>
+        <i class="fa fa-star" aria-hidden="true"></i><span style="font-weight:400"> RECOMMEND</span> The story will be highlighted and recommended to users<br>
+        <span style="font-weight:400">SKIP</span> If completely uncertain, you can skip the story and pass it on to another curator
         </div>
         <br>
         We are ready whenever you are, just press NEXT!
