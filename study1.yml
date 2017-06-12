@@ -715,10 +715,10 @@ stim:
       - Apr 2017
       - May 2017
 settings:
-  endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_3qitTQ0yhRlz5I1?qid="
+  endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?id="
   server:
     remote_adr: "https://janmatthis.de/v1"
-    collection: "misinfo"
+    collection: "misinfo1"
     collectiontest: "misinfotest"
 instr:
   debriefing:
@@ -756,12 +756,21 @@ blocks:
     stim: stories
     stimlayout: headlines
     instr: >
-        <h3>You will see different news headlines and we will ask you to evaluate each.
+        <span style="font-size:1.2em;font-weight:400">Hello, welcome aboard!</span>
         <br><br>
-        The sources and dates you see below the headlines are not reflect the original sources of the stories, but sites and dates on which they have been shared.
+        You are about to help us curate NEWSMORE. We appreciate your effort.
         <br><br>
-        There are no “right” or “wrong” answers. We are interested in your personal views.Thus please answer each question quickly, based on your intuition. Please do not use the Internet to look up the headline or additional information; just rate the headline as it is.
-        </h3><br>
+        Here is a brief overview of what comes next: You will see different news headlines. The topics might vary greatly and this is fine -- NEWSMORE users have various interests. The sources and dates you see below the headlines might refer to sites on which the stories were encountered and not to the original sources. Don't worry too much about these.
+        <br><br>
+        For each story, you can take one of the following actions:
+        <div style="font-size:0.85em">
+        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-size:400"> BAN</span> The submission will not appear in the discussion group<br>
+        <i class="fa fa-check" aria-hidden="true"></i><span style="font-size:400"> ALLOW</span> The story will become available for users to read and share<br>
+        <i class="fa fa-star" aria-hidden="true"></i><span style="font-size:400"> RECOMMEND</span> The story will be highlighted and recommended to users<br>
+        <strong>SKIP</strong> If completely uncertain, you can skip the story and pass it on to another curator
+        </div>
+        <br>
+        We are ready whenever you are, just press NEXT!
 
     qinstr: >
           Based on this headline, to what extent do you expect this story to be...
