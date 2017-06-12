@@ -10,6 +10,9 @@
     <!-- <link rel="icon" href="../../favicon.ico"> -->
     <title>Social media</title>
     <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/material.js"></script>
+    <script src="scripts/ripples.js"></script>
+    <script src="scripts/ripples.js.map"></script>
     <script src="scripts/handlebars-v4.0.5.js"></script>
     <script src="scripts/yaml.js"></script>
     <script src="scripts/underscore-min.js"></script>
@@ -18,7 +21,8 @@
     <script src="scripts/functions.js"></script>
     <script src="scripts/alertify.js"></script>
     <script src="scripts/dropdown.js"></script>
-    <script defer src="demo.js"></script>
+    <script defer src="demo0.js"></script>
+
     <!-- Material Design fonts -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
@@ -31,20 +35,10 @@
 </head>
 
 <!--  START {}TEMPLATES  -->
-<script id="stim-template" type="text/x-handlebars-template">
-    <div class="story">
-        {{#each hbprofiles}} {{> stimcomplete}} {{/each}}
-    </div>
-    <div class="modresp">
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
-      <a class="btn btn-check btn-sm" href="#" role="button"><i class="fa fa-check-square-o" aria-hidden="true"></i> fact-check</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button" style="color:#c6c6c6"> pass on</a>
-    </div>
-</script>
 
-<script id="headlines-template" type="text/x-handlebars-template">
+<!-- Condtion 0: No fact checking -->
+<script id="cond0-template" type="text/x-handlebars-template">
+
     {{#each hbprofiles}}
         <div class="card">
             <div class="stim">
@@ -53,6 +47,137 @@
             </div>
         </div>
     {{/each}}
+
+    <div class="modresp-nofc">
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="ban"
+      data-toggle="tooltip" title="If you choose to BAN this post, it will not appear on the news platform"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="allow"
+      data-toggle="tooltip" title="If you choose to ALLOW this post, it will appear on the news platform"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="recomm"
+      data-toggle="tooltip" title="If you choose to RECOMMEND this post, it will appear on the news platform and be promoted so that more users will see it"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="pass" style="color:#c6c6c6"
+      data-toggle="tooltip" title="If you choose to PASS this post, it will handled by another moderator"> pass on</a>
+    </div>
+
+</script>
+
+<!-- Condtion 1: Fact-checking button -->
+<script id="cond1-template" type="text/x-handlebars-template">
+
+    {{#each hbprofiles}}
+        <div class="card">
+            <div class="stim">
+                  <div class="title">{{title}}</div>
+                  <div class="info">{{source}} - {{date}}</div>
+            </div>
+        </div>
+    {{/each}}
+
+    <div class="modresp-fc">
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="ban"
+      data-toggle="tooltip" data-placement="bottom" title="" data-original-title="If you choose to BAN this post, it will not appear on the news platform"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="allow"
+      data-toggle="tooltip" title="If you choose to ALLOW this post, it will appear on the news platform"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="recomm"
+      data-toggle="tooltip" title="If you choose to RECOMMEND this post, it will appear on the news platform and be promoted so that more users will see it"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
+      <a class="btn btn-check btn-sm" href="#" role="button" data-toggle="modal" data-target="complete-dialog">
+        <i class="fa fa-check-square-o" aria-hidden="true" data="check"></i> fact-check</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="pass" style="color:#c6c6c6"
+      data-toggle="tooltip" title="If you choose to PASS this post, it will handled by another moderator"> pass on</a>
+    </div>
+
+</script>
+
+<!-- Condtion 2: Immediate fact-check -->
+<script id="cond2-template" type="text/x-handlebars-template">
+    {{#each hbprofiles}}
+        <div class="card">
+            <div class="stim">
+                  <div class="title">{{title}}</div>
+                  <div class="info">{{source}} - {{date}}</div>
+            </div>
+        </div>
+    {{/each}}
+    <div class="modresp-nofc">
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="ban"
+      data-toggle="tooltip" title="If you choose to BAN this post, it will not appear on the news platform"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="allow"
+      data-toggle="tooltip" title="If you choose to ALLOW this post, it will appear on the news platform"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="recomm"
+      data-toggle="tooltip" title="If you choose to RECOMMEND this post, it will appear on the news platform and be promoted so that more users will see it"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="pass" style="color:#c6c6c6"
+      data-toggle="tooltip" title="If you choose to PASS this post, it will handled by another moderator"> pass on</a>
+    </div>
+</script>
+
+<!-- Condtion 3: Post-decision fact-cjeck feedback -->
+<script id="cond3-template" type="text/x-handlebars-template">
+
+    {{#each hbprofiles}}
+        <div class="card">
+            <div class="stim">
+                  <div class="title">{{title}}</div>
+                  <div class="info">{{source}} - {{date}}</div>
+            </div>
+        </div>
+    {{/each}}
+    <div class="modresp-nofc">
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
+      <a class="btn btn-stim btn-sm" href="#" role="button" style="color:#c6c6c6"> pass on</a>
+    </div>
+
+</script>
+
+<script id="fc1-template" type="text/x-handlebars-template">
+      <div class={{veracity}}>
+        Fact-checking services classify this story as being <b>{{checkdisp}}</b>.
+      </div>
+      <br />
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-dismiss">Return to story</button>
+      </div>
+</script>
+
+<script id="fc1-na-template" type="text/x-handlebars-template">
+      <div class={{veracity}}>
+        Fact-checking services provide no information regarding the veracity of this story.
+      </div>
+      <br />
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-dismiss">Return to story</button>
+      </div>
+</script>
+
+
+<script id="fc2-template" type="text/x-handlebars-template">
+    <div class="fc-header card" id={{veracity}}>
+      <i class="fa fa-circle" aria-hidden="true"></i>
+        Fact-checking services classify this story as being <b>{{checkdisp}}</b>.
+      <br />
+    </div>
+</script>
+
+<script id="fc2-na-template" type="text/x-handlebars-template">
+    <div class="fc-header card" style="color:lightgray">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+        Fact-checking services provide no information regarding the veracity of this story.
+      <br />
+    </div>
+</script>
+
+<script id="headlines-template" type="text/x-handlebars-template">
+
+    {{#each hbprofiles}}
+        <div class="card">
+            <div class="stim">
+                  <div class="title">{{title}}</div>
+                  <div class="info">{{source}} - {{date}}</div>
+            </div>
+        </div>
+    {{/each}}
+
 </script>
 
 <script id="sources-template" type="text/x-handlebars-template">
@@ -98,12 +223,57 @@
 
     <div class="container">
 
+        <div class="undercover" id="fc">
+        </div>
+
+        <div id="fc-dialog" class="modal fade in undercover" tabindex="-1" style="display: block;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close btn-dismiss" data-dismiss="modal" aria-hidden="true">×</button>
+              </div>
+              <div class="modal-body">
+                <div id="loader" style="margin-auto">
+                  Retrieving information. Please wait.
+                  <br><br>
+                  <img src='imgs/rolling.svg' style="width:5em"/>
+                </div>
+                <div id="fcfb" class="undercover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="loader-wrapper" class="undercover">
+          <div id="loader" style="margin:auto">
+            Retrieving information. Please wait.
+            <br><br>
+            <img src='imgs/rolling.svg' style="width:5em"/>
+          </div>
+          <div id="fcfb"></div>
+        </div>
+
+
+        <div class="undercover fc card" id="fc-true">
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          Fact-checking services classify this story as being {{veracity}}.
+          <br />
+        </div>
+
+        <div class="undercover fc card" id="fc-false">
+          <i class="fa fa-circle" aria-hidden="true"></i>
+          Fact-checking services classify this story as being {{veracity}}.
+        </div>
+
         <div class="undercover" id="instr">
             <div id="ctext"></div>
             <div id="cresp">
                 <a class="btn btn-sm btn-block active btn-instr" href="#" role="button">next</a>
             </div>
         </div>
+
+
 
         <div class="undercover" id="stim">
         </div>

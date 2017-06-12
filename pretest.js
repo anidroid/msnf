@@ -6,7 +6,7 @@ $(document).ready(function() {
     if (QueryString['d']) {
         var designsrc = window.decode(window.QueryString.d)
     } else {
-        designsrc = 'design.yml'
+        designsrc = 'pretest.yml'
     };
 
     // read condition from url or set automatically
@@ -51,6 +51,7 @@ $(document).ready(function() {
         } else {
           pdat['pnid'] = pn //anonymous participant id, linking across data files
         }
+        pdat['pnsrc'] = undefined //source of data collection: e.g., prolific
         pdat['pnsrc'] = QueryString['s'] //source of data collection: e.g., prolific
         pdat['cond'] = c // condition
 
