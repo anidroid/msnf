@@ -64,13 +64,9 @@ $(document).ready(function() {
         }
 
         // ...
-        storytypes = ["PL","PC","N"]
+        storytypes = ["LF","LT","CF","CT","NF","NT"]
         for(i in storytypes){
-            sample = _.sample(_.where(design.stim.stories, {topic: storytypes[i], veracity:true}),5)
-            for (s in sample){
-              _.each(_.where(design.stim.stories, {'id': sample[s].id}), function(o) {o.veracity='noinfo'})
-            }
-            sample = _.sample(_.where(design.stim.stories, {topic: storytypes[i], veracity:false}),5)
+            sample = _.sample(_.where(design.stim.stories, {type: storytypes[i]}),5)
             for (s in sample){
               _.each(_.where(design.stim.stories, {'id': sample[s].id}), function(o) {o.veracity='noinfo'})
             }
