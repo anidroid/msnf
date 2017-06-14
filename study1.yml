@@ -1,654 +1,396 @@
 stim:
   stories:
      -
-      id: 0
-      topic: PL
-      keyword: climate
-      veracity: true
-      title: "Department of Natural Resources Censors All Climate Change Info: Key facts and scientific consensus on climate change and Great Lakes removed."
-     -
-      id: 1
-      topic: PL
-      keyword: climate
-      veracity: true
-      title: "WhiteHouse.gov web site removes the terms 'LGBT' and 'climate change'"
-     -
-      id: 2
-      topic: PL
-      keyword: climate
-      veracity:  false
-      title: "California Introduces Law To Jail Anyone Who Questions Man-Made Climate Change: First Amendment Now Dead"
-     -
-      id: 3
-      topic: PC
-      keyword: climate
-      veracity: false
-      title: "Exposed: How world leaders were duped into investing billions over manipulated global warming data"
-     -
       id: 4
-      topic: PC
+      type: CF
       keyword: gun
       veracity: false
       title: "A longtime anti-gun state legislator shot a home intruder in defense of his property"
      -
-      id: 5
-      topic: PC
-      keyword:
-      veracity: false
-      title: "New executive order limiting Americans to ownership of three guns each"
-     -
-      id: 6
-      topic: PL
-      keyword: gun
-      veracity: false
-      title: "The National Trifle Association (NRA) bans the carrying of guns from their own national convention"
-     -
-      id: 7
-      topic: PC
-      keyword: gun
-      veracity: true
-      title: "A school shooter in Mississippi was stopped by an assistant principal with a gun"
-     -
-      id: 8
-      topic: PL
-      keyword: gun
-      veracity: false
-      title: "Vermont state senator says people who own guns 'are  to commit a crime.'"
-     -
-      id: 11
-      topic: PL
-      keyword: gender
-      veracity: true
-      title: "Today 57% of women are in work, while the share of men is just under 70%."
-     -
-      id: 12
-      topic: PL
-      keyword: gun
-      veracity: true
-      title: "Last year, 244 suspected terrorists walked into gun shops and attempted to purchase a firearm; 223 were able to get the firearm."
-     -
-      id: 13
-      topic: PL
-      keyword: true
-      veracity: true
-      title: "The people who get the death penalty tend to live in places with overaggressive prosecutors and defense lawyers who aren’t up to the task of defending against them — that’s a double whammy."
-     -
-      id: 14
-      topic: PL
-      keyword: true
-      veracity: true
-      title: "Ninety percent of Americans want our background check system strengthened and expanded to cover more gun sales."
-     -
-      id: 15
-      topic: PL
-      keyword: immigration
-      veracity: true
-      title: "The United States only accepted fewer than 1,700 Syrian refugees in fiscal year 2015."
-     -
-      id: 16
-      topic: PL
-      keyword: social
-      veracity: true
-      title: "The U.S. is the only developed country in world that doesn't guarantee workers in private businesses any paid days off at all."
-     -
-      id: 17
-      topic: PL
-      keyword: social
-      veracity: true
-      title: "The European Commission is preparing to rule in the next few weeks on whether Apple owes the Irish government billions in underpaid taxes."
-     -
       id: 18
-      topic: PL
+      topic: CF
       keyword: economy
       veracity: false
       title: "Our economy is much stronger now than 10 years ago. Nearly 15 million new private-sector jobs"
      -
-      id: 19
-      topic: PL
-      keyword: immigration
-      veracity: false
-      title: "Two million more Latinos are in poverty today than eight years ago."
-     -
-      id: 20
-      topic: PL
-      keyword: gov
-      veracity: false
-      title: "Every Republican nominee since Richard Nixon, who at one time was under an audit, has released their tax documents"
-     -
-      id: 21
-      topic: PL
-      keyword: immigration
-      veracity: false
-      title: "Undocumented immigrants pay $12 billion a year into Social Security."
-     -
-      id: 22
-      topic: PL
-      keyword: abortion
-      veracity: false
-      title: "There are more than twice as many fake clinics as there are legitimate abortion providers in the United States."
-     -
       id: 23
-      topic: PL
+      type: CF
       keyword: gov
       veracity: false
       title: "The last time that a Senate of a different party than the president in the White House confirmed a Supreme Court nominee was 1888."
      -
-      id: 24
-      topic: PL
-      keyword: immigration
-      veracity: false
-      title: "We admit about 100,000 permanent immigrants from the Middle East every year."
-     -
       id: 25
-      topic: PC
+      type: CF
       keyword: social
       veracity: false
       title: "53% of Americans disapprove of Obamacare."
      -
-      id: 26
-      topic: PC
-      keyword: social
-      veracity: false
-      title: "The number of food stamp beneficiaries has gone up two-and-a-half times in the last five years."
-     -
       id: 27
-      topic: PC
+      type: CF
       keyword: military
       veracity: false
       title: "China is going to have twice the number of submarines we have in just over a decade."
      -
-      id: 28
-      topic: PC
-      keyword: immigration
-      veracity: false
-      title: "The 2013 immigration bill expanded President Obama’s ability to bring Syrian refugees to this country without mandating any meaningful background checks."
-     -
       id: 30
-      topic: PC
+      type: CF
       keyword: gun
       veracity: false
       title: "Under the current procedure, if someone on a terror watch list tries to buy a gun, authorities are always notified"
      -
-      id: 31
-      topic: PC
-      keyword: military
-      veracity: false
-      title: "Ukraine voluntarily gives up nuclear weapons after United States promises to 'ensure (its) territorial integrity from Russia.'"
-     -
-      id: 32
-      topic: PC
-      keyword: military
-      veracity: false
-      title: "Today, it is more difficult to enlist in the U.S. military than it is to enroll in college"
-     -
-      id: 33
-      topic: PC
-      keyword: abortion
-      veracity: false
-      title: "One in three American women will have had an abortion by the time she reaches the age of 45."
-     -
       id: 34
-      topic: PC
+      type: CF
       keyword: drug
       veracity: false
       title: "Drug overdoses are the No. 1 form of accidental death in the U.S."
      -
-      id: 35
-      topic: PC
-      keyword: gov
-      veracity: true
-      title: "Could Trump be better for the Middle East than Obama? Don’t rule it out yet"
-     -
-      id: 36
-      topic: PC
-      keyword: crime
-      veracity: true
-      title: "Homicides last year increased by the largest amount in 25 years."
-     -
-      id: 37
-      topic: PC
-      keyword: drug
-      veracity: true
-      title: "Marijuana listed alongside heroin as 'most dangerous drugs with no currently accepted medical use and a high potential for abuse.'"
-     -
-      id: 38
-      topic: PC
-      keyword: gov
-      veracity: true
-      title: "Every Republican Senate candidate has now announced whether or not they support the Senate taking up the Supreme Court vacancy."
-     -
-      id: 39
-      topic: PC
-      keyword: gov
-      veracity: true
-      title: "After initially agreeing with Republicans on an amount for Zika funding, Democrats derail it"
-     -
-      id: 40
-      topic: PC
-      keyword: police
-      veracity: true
-      title: "After the shootings of Dallas policemen, nearly 500 people apply to the Dallas Police Department in 12 days"
-     -
-      id: 41
-      topic: PC
-      keyword: immigration
-      veracity: true
-      title: "In 2015, 45 percent of the children refugees came from just two countries: Syria and Afghanistan"
-     -
-      id: 42
-      topic: N
-      keyword: people
-      veracity: true
-      title: "A Florida woman is suing the United Sons of Confederate Veterans after a camel attacked her as she was touring the last home of Confederate president Jefferson Davis."
-     -
-      id: 43
-      topic: N
-      keyword: tech
-      veracity: true
-      title: "EU states approve plans to make social media firms tackle hate speech"
-     -
-      id: 44
-      topic: N
-      keyword: tech
-      veracity: false
-      title: "Samsung Pays Apple $1 Billion Sending 30 Trucks Full of 5 Cents Coins"
-     -
-      id: 45
-      topic: N
-      keyword: people
-      veracity: false
-      title: "Columbus, Ohio School Teacher Loses Eye After Fidget Spinner Breaks In Classroom"
-     -
-      id: 46
-      topic: N
-      keyword: sports
-      veracity: true
-      title: "D’Angelo Russell to be banned from the NBA for disregarding player privacy"
-     -
-      id: 47
-      topic: N
-      keyword: people
-      veracity: false
-      title: "Fisherman Captures 3,000-Pound Great White Shark in Great Lakes"
-     -
-      id: 48
-      topic: N
-      keyword: health
-      veracity: false
-      title: "Doctors warn: If you use aluminum foil, stop it or face deadly consequences"
-     -
-      id: 49
-      topic: PL
-      keyword: immigration
-      veracity: true
-      title: "The ACLU issues a “travel advisory” for Texas after the state bans sanctuary cities"
-     -
       id: 50
-      topic: PC
+      type: CF
       keyword: pc
       veracity:  false
       title: "Harvard students plan graduation ceremony for blacks only, claim it’s ‘not about segregation’"
      -
-      id: 51
-      topic: PC
-      keyword: trump
-      veracity: false
-      title: "Trump Makes One Phone Call and Gets Stephen Colbert Fired"
-
-     -
       id: 52
-      topic: N
+      type: CF
       keyword: people
       veracity: false
       title: "Teacher arrested for stapling a “loudmouth” student's lips shut"
      -
       id: 53
-      topic: P
+      type: CF
       keyword: climate
       veracity: false
       title: "Legislative time bomb: There is no consensus about humain -induced climate change"
      -
-      id: 54
-      topic: PL
-      keyword: social
-      veracity: true
-      title: "Canada, Norway, and Germany offer federally paid family leave programs for up  to 1 year"
-     -
-      id: 55
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "Trump has a Civil War memorial on his DC golf course — for a battle that never happened"
-     -
-      id: 56
-      topic: PC
-      keyword: military
-      veracity: true
-      title: "North Korea warns of 'bigger gift package' for U.S. after latest test"
-     -
-      id: 57
-      topic: N
-      keyword: tech
-      veracity: true
-      title: "Electric shocks 'improve' dried herbs taste"
-     -
-      id: 58
-      topic: PL
-      keyword: social
-      veracity: true
-      title: "The People Left Behind When Only the 'Deserving' Poor Get Help"
-     -
-      id: 59
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "Appeals court refuses to reinstate Trump's travel ban"
-     -
-      id: 60
-      topic: N
-      keyword: people
-      veracity: true
-      title: "9-Year-Old Girl Sells Lemonade to Stop Her Local Library From Closing"
-     -
-      id: 61
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "President Trump Says His Trip Saved 'Millions of Jobs.' That's Not True"
-     -
-      id: 62
-      topic: N
-      keyword: news
-      veracity: true
-      title: "Lebanese ministry calls for ban on “Wonder Woman”"
-     -
-      id: 63
-      topic: N
-      keyword: news
-      veracity: true
-      title: "How ATM skimmers can steal your credit card info without you knowing it"
-     -
-      id: 64
-      topic: N
-      keyword: news
-      veracity: true
-      title: "Little Mermaid statue in Denmark painted red in whale-hunting protest"
-     -
-      id: 65
-      topic: N
-      keyword: celeb
-      veracity: true
-      title: "Nicki Minaj confirms Nas dating rumors"
-     -
-      id: 66
-      topic: N
-      keyword: celeb
-      veracity: true
-      title: "Michael J. Fox is back as Marty McFly, in LEGO form"
-     -
-      id: 67
-      topic: N
-      keyword: celeb
-      veracity: true
-      title: "Gisele opens up about marriage with Tom Brady"
-     -
-      id: 68
-      topic: N
-      keyword: celeb
-      veracity: true
-      title: "Miss USA's ideas on feminism divides fans"
-     -
-      id: 69
-      topic: N
-      keyword: celeb
-      veracity: true
-      title: "Michael Jackson's daughter writes that 'being naked is part of what makes us human.'"
-     -
-      id: 71
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "Allies distance themselves from U.S. after Trump's first foreign trip"
-     -
-      id: 72
-      topic: PL
-      keyword: trump
-      veracity: true
-      title: "White House communications director Mike Dubke resigns"
-     -
-      id: 73
-      topic: PL
-      keyword: trump
-      veracity: false
-      title: "Donald Trump reveals sensitive military information in a phone conversation with Philippine President "
-     -
-      id: 74
-      topic: PC
-      keyword: islam
-      veracity: false
-      title: "Leaked: New Common Core Guidelines Under Clinton Force Schools To Teach History Of Islam"
-     -
-      id: 75
-      topic: PL
-      keyword: trump
-      veracity:  true
-      title: "Trump hires a health department spokeswoman who thinks abortions cause breast cancer."
-     -
-      id: 76
-      topic: N
-      keyword: sci health
-      veracity: false
-      title: "Sour Honey shown to demolish breast cancer cells on the spot"
-     -
-      id: 77
-      topic: PC
-      keyword: pc
-      veracity: false
-      title: "Harvard To Hold Blacks-Only Graduation Ceremony"
-     -
-      id: 78
-      topic: PL
-      keyword: trump
-      veracity: false
-      title: "Trump Says Americans Have “No Right” to Protest Him. TYRANNY."
-     -
       id: 79
-      topic: PC
+      type: CF
       keyword: immigration
       veracity:  false
       title: "Fury over Syrian refugee claiming $392,000 for 4 wives and 22 kids, pleads he can't work due to 'family commitments'"
      -
-      id: 80
-      topic: N
-      keyword: sci env
-      veracity: false
-      title: "Earth's Magnetic Field is Collapsing and The Poles Are About To Switch"
-     -
-      id: 81
-      topic: N
-      keyword: sci env
+      id: 0
+      type: CT
+      keyword: climate
       veracity: true
-      title: "Brazil to release a strain of mutant GM mosquitoes"
+      title: "Department of Natural Resources Censors All Climate Change Info: Key facts and scientific consensus on climate change and Great Lakes removed."
      -
-      id: 82
-      topic: N
-      keyword: sci env
-      veracity: false
-      title: "Mankind destroys animal kingdom with enormous velocity"
+      id: 1
+      type: CT
+      keyword: climate
+      veracity: true
+      title: "WhiteHouse.gov web site removes the terms 'LGBT' and 'climate change'"
      -
-      id: 83
-      topic: N
-      keyword: sci env
-      veracity: false
-      title: "Researchers Accidentally Find Simple Way to Convert Harmful CO2 Gas to Green Energy"
+      id: 7
+      type: CT
+      keyword: gun
+      veracity: true
+      title: "A school shooter in Mississippi was stopped by an assistant principal with a gun"
      -
-      id: 84
-      topic: PC
+      id: 12
+      type: CT
+      keyword: gun
+      veracity: true
+      title: "Last year, 244 suspected terrorists walked into gun shops and attempted to purchase a firearm; 223 were able to get the firearm."
+     -
+      id: 35
+      type: CT
       keyword: gov
       veracity: true
-      title: "As the media target Jared Kushner, is the sense of crisis overblown?"
+      title: "Could Trump be better for the Middle East than Obama? Don’t rule it out yet"
      -
-      id: 85
-      topic: PC
-      keyword: trump
+      id: 36
+      type: CT
+      keyword: crime
       veracity: true
-      title: "Trump tweets Russia 'laughing' about US probe into election meddling"
+      title: "Homicides last year increased by the largest amount in 25 years."
+     -
+      id: 38
+      type: CT
+      keyword: gov
+      veracity: true
+      title: "Every Republican Senate candidate has now announced whether or not they support the Senate taking up the Supreme Court vacancy."
+     -
+      id: 40
+      type: CT
+      keyword: police
+      veracity: true
+      title: "After the shootings of Dallas policemen, nearly 500 people apply to the Dallas Police Department in 12 days"
+     -
+      id: 63
+      type: CT
+      keyword: news
+      veracity: true
+      title: "How ATM skimmers can steal your credit card info without you knowing it"
      -
       id: 86
-      topic: PC
+      type: CT
       keyword: trump
       veracity: true
       title: "Trump wants Senate rules changed to speed up health care, tax legislation"
      -
-      id: 88
-      topic: N
-      keyword: sci
-      veracity: true
-      title: "Top geneticist working on technique to 'cheat death'"
-     -
-      id: 89
-      topic: N
-      keyword: sci
-      veracity: true
-      title: "Mars Trojans may be part of a planet that was destroyed long ago"
-     -
-      id: 90
-      topic: N
-      keyword: sci
-      veracity: true
-      title: "See-through frog has heart you can see beating through its chest"
-     -
-      id: 91
-      topic: N
-      keyword: sci
-      veracity: true
-      title: "Gene tweak in gut bacteria could turn faeces blue if you’re ill"
-     -
-      id: 92
-      topic: N
-      keyword: celeb
-      veracity: false
-      title: "Hip-hop and pop star Nelly arrested on drug charges this year."
-     -
-      id: 93
-      topic: N
-      keyword: food
-      veracity: false
-      title: "The Taco Bell fast food chain to close all locations in 2018."
-     -
       id: 94
-      topic: PC
+      type: CT
       keyword: immigration
       veracity: true
       title: "Majorities in Europe, North America worried about Islamic extremism"
      -
+      id: 112
+      type: CT
+      keyword: clinton
+      veracity: true
+      title: "'Prison labor excerpt from Hillary Clinton's 1996 book resurfaces, shocks supporters"
+     -
+      id: 5
+      type: LF
+      keyword:
+      veracity: false
+      title: "New executive order limiting Americans to ownership of three guns each"
+     -
+      id: 6
+      type: LF
+      keyword: gun
+      veracity: false
+      title: "The National Trifle Association (NRA) bans the carrying of guns from their own national convention"
+     -
+      id: 21
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "Undocumented immigrants pay $12 billion a year into Social Security."
+     -
+      id: 24
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "We admit about 100,000 permanent immigrants from the Middle East every year."
+     -
+      id: 28
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "The 2013 immigration bill expanded President Obama’s ability to bring Syrian refugees to this country without mandating any meaningful background checks."
+     -
+      id: 33
+      type: LF
+      keyword: abortion
+      veracity: false
+      title: "One in three American women will have had an abortion by the time she reaches the age of 45."
+     -
+      id: 78
+      type: LF
+      keyword: trump
+      veracity: false
+      title: "Trump Says Americans Have “No Right” to Protest Him. TYRANNY."
+     -
+      id: 83
+      type: LF
+      keyword: environment
+      veracity: false
+      title: "Researchers Accidentally Find Simple Way to Convert Harmful CO2 Gas to Green Energy"
+     -
       id: 95
-      topic: PL
+      type: LF
       keyword: trump
       veracity: false
       title: "The Senate Used 46 Staffers To Investigate Benghazi, But Is Using Just 7 For Trump/Russia"
      -
       id: 96
-      topic: PL
+      type: LF
       keyword: trump
       veracity: false
       title: "Trump Is Giving A $4 Billion Tax Cut To His Kids As He Takes Away Health Care From Millions"
      -
-      id: 97
-      topic: N
-      keyword: people
-      veracity: true
-      title: "Woman With Too Much Makeup Mistaken As Clown; Attacked By Angry Mob"
-     -
-      id: 98
-      topic: N
-      keyword: tech
-      veracity: false
-      title: "Everything You’ve Have Ever Posted On Facebook Will Become Public"
-     -
-      id: 99
-      topic: PL
-      keyword: people
-      veracity: false
-      title: "OUTRAGE: This Convicted Campus Rapist Will Completely Avoid Prison Time"
-     -
-      id: 100
-      topic: PL
-      keyword: lgbt
-      veracity: false
-      title: "NC School Board Just Approved the Pepper Spraying of Trans Students In Bathrooms"
-     -
       id: 101
-      topic: PL
+      type: LF
       keyword: lgbt
       veracity: false
       title: "“The Walking Dead” Vows to Leave Georgia if Republicans Pass Anti-LGBT Law"
      -
       id: 102
-      topic: PL
+      type: LF
       keyword: immigration
       veracity: false
       title: "Muslims Just Donated 30,000 Bottles Of Water To Victims Of Michigan Poisoning"
+
      -
-      id: 103
-      topic: PL
-      keyword: race
-      veracity: false
-      title: "Black Woman Dies After Being Forcibly Removed From Hospital By Cops"
-     -
-      id: 104
-      topic: N
-      keyword: people
-      veracity: false
-      title: "Man Claims The New Unicorn Frappuccinio at Starbucks Made Him Gay"
-     -
-      id: 105
-      topic: N
-      keyword: celeb
-      veracity: false
-      title: "Miley Cyrus Says: I Hate Trump So Much That I’d Rather Have North Korea Nuke Us To Death"
-     -
-      id: 106
-      topic: N
-      keyword: misc
-      veracity: false
-      title: "Prepare To Freak Out! Netflix Is Going To Stream Every Single Disney Movie"
-     -
-      id: 107
-      topic: N
-      keyword: misc
-      veracity: false
-      title: "Saving Private Ryan To Be Remade With All-Female Cast"
-     -
-      id: 109
-      topic: N
-      keyword: celeb
+      id: 14
+      type: LT
+      keyword: true
       veracity: true
-      title: "Actor Jeff Goldblum has a food truck called 'Chef Goldblum's.'"
+      title: "Ninety percent of Americans want our background check system strengthened and expanded to cover more gun sales."
      -
-      id: 109
-      topic: N
-      keyword: misc
-      veracity: false
-      title: "Pittsburgh’s Original Hot Dog Shop To Be Added To UNESCO List Of World Heritage Sites"
+      id: 17
+      type: LT
+      keyword: social
+      veracity: true
+      title: "The European Commission is preparing to rule in the next few weeks on whether Apple owes the Irish government billions in underpaid taxes."
      -
-      id: 110
-      topic: PC
-      keyword: climate
-      veracity: false
-      title: "'Time' magazine ran a cover story titled `How to Survive the Coming Ice Age'... in 1977!"
+      id: 41
+      type: LT
+      keyword: immigration
+      veracity: true
+      title: "In 2015, 45 percent of the children refugees came from just two countries: Syria and Afghanistan"
+     -
+      id: 43
+      type: LT
+      keyword: tech
+      veracity: true
+      title: "EU states approve plans to make social media firms tackle hate speech"
+     -
+      id: 49
+      type: LT
+      keyword: immigration
+      veracity: true
+      title: "The ACLU issues a “travel advisory” for Texas after the state bans sanctuary cities"
+     -
+      id: 54
+      type: LT
+      keyword: social
+      veracity: true
+      title: "Canada, Norway, and Germany offer federally paid family leave programs for up  to 1 year"
+     -
+      id: 59
+      type: LT
+      type: LTtrump
+      veracity: true
+      title: "Appeals court refuses to reinstate Trump's travel ban"
+     -
+      id: 61
+      type: LT
+      keyword: trump
+      type: LT true
+      title: "President Trump Says His Trip Saved 'Millions of Jobs.' That's Not True"
+     -
+      id: 64
+      type: LT
+      keyword: news
+      veracity: true
+      title: "Little Mermaid statue in Denmark painted red in whale-hunting protest"
+     -
+      id: 71
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "Allies distance themselves from U.S. after Trump's first foreign trip"
+     -
+      id: 85
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "Trump tweets Russia 'laughing' about US probe into election meddling"
      -
       id: 111
-      topic: PL
+      type: LT
       keyword: trump
       veracity: true
       title: "How Donald Trump Shifted Kids-Cancer Charity Money Into His Business"
      -
-      id: 112
-      topic: PC
-      keyword: clinton
+      id: 44
+      type: NF
+      keyword: tech
+      veracity: false
+      title: "Samsung Pays Apple $1 Billion Sending 30 Trucks Full of 5 Cents Coins"
+     -
+      id: 45
+      type: NF
+      keyword: people
+      veracity: false
+      title: "Columbus, Ohio School Teacher Loses Eye After Fidget Spinner Breaks In Classroom"
+     -
+      id: 48
+      type: NF
+      keyword: health
+      veracity: false
+      title: "Doctors warn: If you use aluminum foil, stop it or face deadly consequences"
+     -
+      id: 76
+      type: NF
+      keyword: health
+      veracity: false
+      title: "Sour Honey shown to demolish breast cancer cells on the spot"
+     -
+      id: 82
+      type: NF
+      keyword: environment
+      veracity: false
+      title: "Mankind destroys animal kingdom with enormous velocity"
+     -
+      id: 92
+      type: NF
+      keyword: celeb
+      veracity: false
+      title: "Hip-hop and pop star Nelly arrested on drug charges this year."
+     -
+      id: 106
+      type: NF
+      keyword: tv
+      veracity: false
+      title: "Prepare To Freak Out! Netflix Is Going To Stream Every Single Disney Movie"
+     -
+      id: 107
+      type: NF
+      keyword: film
+      veracity: false
+      title: "Saving Private Ryan To Be Remade With All-Female Cast"
+     -
+      id: 42
+      type: NF
+      keyword: people
       veracity: true
-      title: "'Prison labor excerpt from Hillary Clinton's 1996 book resurfaces, shocks supporters"
+      title: "A Florida woman is suing the United Sons of Confederate Veterans after a camel attacked her as she was touring the last home of Confederate president Jefferson Davis."
+     -
+      id: 46
+      type: NF
+      keyword: sports
+      veracity: true
+      title: "D’Angelo Russell to be banned from the NBA for disregarding player privacy"
+     -
+      id: 60
+      type: NF
+      keyword: people
+      veracity: true
+      title: "9-Year-Old Girl Sells Lemonade to Stop Her Local Library From Closing"
+     -
+      id: 62
+      type: NF
+      keyword: news
+      veracity: true
+      title: "Lebanese ministry calls for ban on “Wonder Woman”"
+     -
+      id: 66
+      type: NF
+      keyword: entertainment
+      veracity: true
+      title: "Michael J. Fox is back as Marty McFly, in LEGO form"
+     -
+      id: 68
+      type: NF
+      keyword: entertainment
+      veracity: true
+      title: "Miss USA's ideas on feminism divides fans"
+     -
+      id: 81
+      type: NF
+      keyword: environment
+      veracity: true
+      title: "Brazil to release a strain of mutant GM mosquitoes"
+     -
+      id: 88
+      type: NF
+      keyword: genetics
+      veracity: true
+      title: "Top geneticist working on technique to 'cheat death'"
+     -
+      id: 90
+      type: NF
+      keyword: animals
+      veracity: true
+      title: "See-through frog has heart you can see beating through its chest"
+     -
+      id: 91
+      type: NF
+      keyword: health
+      veracity: true
+      title: "Gene tweak in gut bacteria could turn faeces blue if you’re ill"
   sources:
       - GlossyNews
       - LifeNews
