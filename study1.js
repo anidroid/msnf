@@ -55,14 +55,6 @@ $(document).ready(function() {
         pdat['pnsrc'] = QueryString['s'] //source of data collection: e.g., prolific
         pdat['cond'] = c // condition
 
-        // pairing each story with random source and date
-        for (i in design.stim.stories) {
-          design.stim.stories[i].source = _.sample(design.stim.sources)
-          design.stim.stories[i].date = _.sample(design.stim.dates)
-          _.each(_.where(design.stim.stories, {'veracity': true}), function(o) {o.checkdisp='likely true'})
-          _.each(_.where(design.stim.stories, {'veracity': false}), function(o) {o.checkdisp='likely false'})
-        }
-
         // ...
         storytypes = ["LF","LT","CF","CT","NF","NT"]
         for(i in storytypes){
@@ -71,6 +63,16 @@ $(document).ready(function() {
               _.each(_.where(design.stim.stories, {'id': sample[s].id}), function(o) {o.veracity='noinfo'})
             }
         }
+
+        // pairing each story with random source and date
+        for (i in design.stim.stories) {
+          design.stim.stories[i].source = _.sample(design.stim.sources)
+          design.stim.stories[i].date = _.sample(design.stim.dates)
+          _.each(_.where(design.stim.stories, {'veracity': true}), function(o) {o.checkdisp='likely true'})
+          _.each(_.where(design.stim.stories, {'veracity': false}), function(o) {o.checkdisp='likely false'})
+        }
+
+
 
         // determine what changes in each condition
         switch(c){
@@ -177,7 +179,7 @@ $(document).ready(function() {
                 $("#loader").hide( );
                 $('#fcfb').show();
                 tdat['fcseen'] = true;
-              }, _.sample(_.range(10,4000)));
+              }, _.sample(_.range(10,3000)));
           });
 
           $('.btn-dismiss').on('click', function(){
