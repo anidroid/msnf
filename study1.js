@@ -109,7 +109,7 @@ $(document).ready(function() {
 
             // if in test mode, set fewer trials
             if(test=="true") {
-              order = _.shuffle(_.range(2))
+              order = _.shuffle(_.range(5))
             }
 
             // clear block data object
