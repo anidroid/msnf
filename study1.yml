@@ -392,10 +392,8 @@ stim:
       veracity: true
       title: "Gene tweak in gut bacteria could turn faeces blue if you’re ill"
   sources:
-      - GlossyNews
       - LifeNews
       - NationNews
-      - NewsCorpse
       - NYmeta
       - PolicyReview
       - TheCivillian
@@ -423,7 +421,6 @@ stim:
       - MSNBC
       - NationalReport
       - News Biscuit
-      - Newslo
       - TheBostonTribune
       - NewsNerd
       - WND
@@ -435,7 +432,6 @@ stim:
       - CityJournal
       - DailyNewsbin
       - Daily USA Update
-      - FrontpageMag
       - GlobalEconomicAnalysis
       - GlobalPoliticsNow
   dates:
@@ -460,7 +456,7 @@ settings:
   endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?id="
   server:
     remote_adr: "https://janmatthis.de/v1"
-    collection: "misinfo1"
+    collection: "misinfotest"
     collectiontest: "misinfotest"
 instr:
   debriefing:
