@@ -177,7 +177,7 @@ $(document).ready(function() {
                 $("#loader").hide( );
                 $('#fcfb').show();
                 tdat['fcseen'] = true;
-              }, 5000);
+              }, _.sample(_.range(10,4000)));
           });
 
           $('.btn-dismiss').on('click', function(){
