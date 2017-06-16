@@ -258,6 +258,7 @@ stim:
       type: LT
       keyword: trump
       type: LT true
+      veracity: true
       title: "President Trump Says His Trip Saved 'Millions of Jobs.' That's Not True"
      -
       id: 64
