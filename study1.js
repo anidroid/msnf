@@ -239,7 +239,8 @@ $(document).ready(function() {
         });
 
         routie('debrief', function() {
-
+          $('.progress-bar').hide();
+          
             $('.undercover').hide();
 
             $('#stim').show();
