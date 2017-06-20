@@ -142,7 +142,7 @@ $(document).ready(function() {
 
           tdat['fcheck'] = 'NA';
           tdat['fcseen'] = 'NA';
-          tdat['veractiy1'] = design.stim.stories[curr].veracity;
+          tdat['veracity1'] = design.stim.stories[curr].veracity;
 
           tstart =  Date.now()
           switch(c){
