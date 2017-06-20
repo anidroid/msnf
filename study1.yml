@@ -8,7 +8,7 @@ stim:
       title: "A longtime anti-gun state legislator shot a home intruder in defense of his property"
      -
       id: 18
-      topic: CF
+      type: CF
       keyword: economy
       veracity: false
       title: "Our economy is much stronger now than 10 years ago. Nearly 15 million new private-sector jobs"
@@ -250,14 +250,13 @@ stim:
      -
       id: 59
       type: LT
-      type: LTtrump
+      keyword: LTtrump
       veracity: true
       title: "Appeals court refuses to reinstate Trump's travel ban"
      -
       id: 61
       type: LT
       keyword: trump
-      type: LT true
       veracity: true
       title: "President Trump Says His Trip Saved 'Millions of Jobs.' That's Not True"
      -
@@ -334,61 +333,61 @@ stim:
       title: "Saving Private Ryan To Be Remade With All-Female Cast"
      -
       id: 42
-      type: NF
+      type: NT
       keyword: people
       veracity: true
       title: "A Florida woman is suing the United Sons of Confederate Veterans after a camel attacked her as she was touring the last home of Confederate president Jefferson Davis."
      -
       id: 46
-      type: NF
+      type: NT
       keyword: sports
       veracity: true
       title: "D’Angelo Russell to be banned from the NBA for disregarding player privacy"
      -
       id: 60
-      type: NF
+      type: NT
       keyword: people
       veracity: true
       title: "9-Year-Old Girl Sells Lemonade to Stop Her Local Library From Closing"
      -
       id: 62
-      type: NF
+      type: NT
       keyword: news
       veracity: true
       title: "Lebanese ministry calls for ban on “Wonder Woman”"
      -
       id: 66
-      type: NF
+      type: NT
       keyword: entertainment
       veracity: true
       title: "Michael J. Fox is back as Marty McFly, in LEGO form"
      -
       id: 68
-      type: NF
+      type: NT
       keyword: entertainment
       veracity: true
       title: "Miss USA's ideas on feminism divides fans"
      -
       id: 81
-      type: NF
+      type: NT
       keyword: environment
       veracity: true
       title: "Brazil to release a strain of mutant GM mosquitoes"
      -
       id: 88
-      type: NF
+      type: NT
       keyword: genetics
       veracity: true
       title: "Top geneticist working on technique to 'cheat death'"
      -
       id: 90
-      type: NF
+      type: NT
       keyword: animals
       veracity: true
       title: "See-through frog has heart you can see beating through its chest"
      -
       id: 91
-      type: NF
+      type: NT
       keyword: health
       veracity: true
       title: "Gene tweak in gut bacteria could turn faeces blue if you’re ill"
