@@ -220,7 +220,7 @@ $(document).ready(function() {
         });
 
         routie('end', function() {
-            $('.progress-bar').hide();
+            $('.progress').hide();
             $('.undercover').hide();
             $('#debrief').show();
             $('#dtext1').empty().append($.parseHTML(design.instr.debriefing.text1));
@@ -239,8 +239,8 @@ $(document).ready(function() {
         });
 
         routie('debrief', function() {
-          $('.progress-bar').hide();
-          
+            $('.progress').hide();
+
             $('.undercover').hide();
 
             $('#stim').show();
