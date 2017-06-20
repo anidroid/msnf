@@ -454,10 +454,10 @@ stim:
       - Apr 2017
       - May 2017
 settings:
-  endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?id="
+  endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?pnid="
   server:
     remote_adr: "https://janmatthis.de/v1"
-    collection: "misinfotest"
+    collection: "misinfo1"
     collectiontest: "misinfotest"
 instr:
   debriefing:
