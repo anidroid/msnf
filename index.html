@@ -222,9 +222,30 @@
 <body>
 
     <div class="container">
+      <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 10;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
 
         <div class="undercover" id="fc">
         </div>
+
+        <div id="halfway-dialog" class="modal fade in undercover" tabindex="-1" style="display: block;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close btn-dismiss" data-dismiss="modal" aria-hidden="true">×</button>
+              </div>
+              <div class="modal-body">
+                You're half way through today's stories! Feel free to take a short break if you like, just remember not to close this page.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-dismiss">Continue</button>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+
 
         <div id="fc-dialog" class="modal fade in undercover" tabindex="-1" style="display: block;">
           <div class="modal-dialog">
