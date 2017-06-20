@@ -126,11 +126,20 @@ $(document).ready(function() {
         });
 
         routie('run/?:b/?:t', function(b,t) {
+
           $('.undercover').hide();
           b = parseInt(b)
           t = parseInt(t)
           curr = order[t]
           tdat = {}
+
+          $('.progress-bar').css({'width':t/order.length*100+'%'});
+
+          if(t==Math.round(order.length/2)){
+            $('#halfway-dialog').show();
+
+          }
+
           tdat['fcheck'] = 'NA';
           tdat['fcseen'] = 'NA';
           tstart =  Date.now()
@@ -184,6 +193,7 @@ $(document).ready(function() {
 
           $('.btn-dismiss').on('click', function(){
             $('#fc-dialog').hide();
+            $('#halfway-dialog').hide();
           });
 
 
@@ -194,7 +204,6 @@ $(document).ready(function() {
               tdat['src'] = design.stim.stories[curr].source;
               tdat['resp'] = $(this).data('resp');
               tdat['rt'] =  Date.now()-tstart
-
               bdat.push(tdat)
               tdat={}
               dat[design.blocks[b].id] = bdat
