@@ -499,7 +499,7 @@ blocks:
         Here is a brief overview of what comes next: You will see different news headlines. The topics might vary greatly and this is fine -- NEWSMORE users have various interests. The sources and dates you see below the headlines might refer to sites on which the stories were encountered and not to the original sources. Don't worry too much about these.
         <br><br>
         For each story, you can take one of the following actions:
-        <div style="font-size:0.85em; width: 500px;">
+        <div style="font-size:0.85em">
         <i class="fa fa-ban" aria-hidden="true"></i><span style="font-weight:400"> BAN STORY</span> The submission will NOT appear in the news group<br>
         <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span style="font-weight:400"> ALLOW+DEMOTE</span> The submission will appear in the group, but be demoted so that less users will see it; it will appear with a warning, indicating that a curator considers it problematic<br>
         <i class="fa fa-check" aria-hidden="true"></i><span style="font-weight:400"> ALLOW STORY</span> The submission will become available for users to read and share<br>
