@@ -456,7 +456,7 @@ settings:
   endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?pnid="
   server:
     remote_adr: "https://janmatthis.de/v1"
-    collection: "misinfo1"
+    collection: "misinfotest"
     collectiontest: "misinfotest"
 instr:
   debriefing:
@@ -499,11 +499,12 @@ blocks:
         Here is a brief overview of what comes next: You will see different news headlines. The topics might vary greatly and this is fine -- NEWSMORE users have various interests. The sources and dates you see below the headlines might refer to sites on which the stories were encountered and not to the original sources. Don't worry too much about these.
         <br><br>
         For each story, you can take one of the following actions:
-        <div style="font-size:0.85em">
-        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-weight:400"> BAN</span> The submission will not appear in the discussion group<br>
-        <i class="fa fa-check" aria-hidden="true"></i><span style="font-weight:400"> ALLOW</span> The story will become available for users to read and share<br>
-        <i class="fa fa-star" aria-hidden="true"></i><span style="font-weight:400"> RECOMMEND</span> The story will be highlighted and recommended to users<br>
-        <span style="font-weight:400">SKIP</span> If completely uncertain, you can skip the story and pass it on to another curator
+        <div style="font-size:0.85em; width: 500px;">
+        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-weight:400"> BAN STORY</span> The submission will NOT appear in the news group<br>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span style="font-weight:400"> ALLOW+DEMOTE</span> The submission will appear in the group, but be demoted so that less users will see it; it will appear with a warning, indicating that a curator considers it problematic<br>
+        <i class="fa fa-check" aria-hidden="true"></i><span style="font-weight:400"> ALLOW STORY</span> The submission will become available for users to read and share<br>
+        <i class="fa fa-star" aria-hidden="true"></i><span style="font-weight:400"> ALLOW+PROMOTE</span>  The submission will be promoted so that more users will see it; it will appear with a star, indicating that a curator recommends it<br>
+        <span style="font-weight:400">SKIP</span> If completely uncertain, you can skip the submission and pass it on to another curator
         </div>
         <br>
         We are ready whenever you are, just press NEXT!
