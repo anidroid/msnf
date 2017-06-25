@@ -204,6 +204,7 @@ $(document).ready(function() {
               tdat['order'] = t;
               tdat['stimid'] = design.stim.stories[curr].id;
               tdat['src'] = design.stim.stories[curr].source;
+              tdat['date'] = design.stim.stories[curr].date;
               tdat['resp'] = $(this).data('resp');
               tdat['rt'] =  Date.now()-tstart
               bdat.push(tdat)
