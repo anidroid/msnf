@@ -4,7 +4,9 @@ $(document).ready(function() {
     script = QueryString['v']+'.js'
     $.getScript( script, function() {
     });
-  } else {
+  }
+
+  if(typeof QueryString['v'] === "undefined") {
     $.getScript( 'pretest.js', function() {
     });
   }

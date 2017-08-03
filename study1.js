@@ -18,6 +18,7 @@ $(document).ready(function() {
 
     // checking if test run
     window.test = QueryString['test']
+    window.feedb = QueryString['fb']
 
     // everything happens within this function
     function callbackStimuli(data) {
@@ -29,6 +30,7 @@ $(document).ready(function() {
         var bucket_name = 'app';
         var collection_name = design.settings.server.collection;
         if (test=="true"){
+          window.feedb = 'true';
           collection_name = design.settings.server.collectiontest;
         }
         var pn = _.random(1, 999999).toString();
@@ -55,6 +57,15 @@ $(document).ready(function() {
         pdat['pnsrc'] = QueryString['s'] //source of data collection: e.g., prolific
         pdat['cond'] = c // condition
 
+        // pairing each story with random source and date
+        for (i in design.stim.stories) {
+          design.stim.stories[i].true = design.stim.stories[i].veracity
+          design.stim.stories[i].source = _.sample(design.stim.sources)
+          design.stim.stories[i].date = _.sample(design.stim.dates)
+          _.each(_.where(design.stim.stories, {'veracity': true}), function(o) {o.checkdisp='likely true'})
+          _.each(_.where(design.stim.stories, {'veracity': false}), function(o) {o.checkdisp='likely false'})
+        }
+
         // ...
         storytypes = ["LF","LT","CF","CT","NF","NT"]
         for(i in storytypes){
@@ -63,15 +74,6 @@ $(document).ready(function() {
               _.each(_.where(design.stim.stories, {'id': sample[s].id}), function(o) {o.veracity='noinfo'})
             }
         }
-
-        // pairing each story with random source and date
-        for (i in design.stim.stories) {
-          design.stim.stories[i].source = _.sample(design.stim.sources)
-          design.stim.stories[i].date = _.sample(design.stim.dates)
-          _.each(_.where(design.stim.stories, {'veracity': true}), function(o) {o.checkdisp='likely true'})
-          _.each(_.where(design.stim.stories, {'veracity': false}), function(o) {o.checkdisp='likely false'})
-        }
-
 
 
         // determine what changes in each condition
@@ -109,7 +111,7 @@ $(document).ready(function() {
 
             // if in test mode, set fewer trials
             if(test=="true") {
-              order = _.shuffle(_.range(5))
+              order = _.sample(order,6)
             }
 
             // clear block data object
@@ -210,6 +212,53 @@ $(document).ready(function() {
               bdat.push(tdat)
               tdat={}
               dat[design.blocks[b].id] = bdat
+
+              if(feedb == "true"){
+                if( design.stim.stories[curr].true == true ){
+                  switch($(this).data('resp')){
+                    case ('ban'):
+                      alertify.error("This story is NOT FAKE!");
+                    break;
+                    case ('demote'):
+                      alertify.error("This story is NOT FAKE!");
+                    break;
+                    case ('allow'):
+                      alertify.success("This story is NOT FAKE!");
+                    break;
+                    case ('promote'):
+                      alertify.success("This story is NOT FAKE!");
+                    break;
+                    case 'pass':
+                      alertify.success("This story is NOT FAKE!");
+                    break;
+                    default:
+                    console.log('errt')
+                  }
+                }
+
+                if( design.stim.stories[curr].true == false ){
+                  switch($(this).data('resp')){
+                    case ('ban'):
+                      alertify.success("This story is FAKE!");
+                    break;
+                    case ('demote'):
+                      alertify.success("This story is FAKE!");
+                    break;
+                    case ('allow'):
+                      alertify.error("This story is FAKE!");
+                    break;
+                    case ('promote'):
+                      alertify.error("This story is FAKE!");
+                    break;
+                    case 'pass':
+                      alertify.error("This story is FAKE!");
+                    break;
+                    default:
+                    console.log('errf')
+                  }
+                }
+              }
+
               if(t < order.length-1) {
                 routie('run/'+b+'/'+(t+1))
               } else {
