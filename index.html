@@ -22,7 +22,6 @@
     <script src="scripts/alertify.js"></script>
     <script src="scripts/dropdown.js"></script>
     <script defer src="main.js"></script>
-
     <!-- Material Design fonts -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
@@ -35,7 +34,8 @@
 </head>
 
 <!--  START {}TEMPLATES  -->
-
+<div class="cover" style="position:fixed; z-index:99999 !important;background:#EEEEEE;width:100%!important;height:100%!important;"></div>
+</div>
 <!-- Condtion 0: No fact checking -->
 <script id="cond0-template" type="text/x-handlebars-template">
 
@@ -115,6 +115,8 @@
 </script>
 
 <!-- Condtion 3: Post-decision fact-cjeck feedback -->
+
+<!-- Condtion 0: No fact checking -->
 <script id="cond3-template" type="text/x-handlebars-template">
 
     {{#each hbprofiles}}
@@ -125,14 +127,22 @@
             </div>
         </div>
     {{/each}}
+
     <div class="modresp-nofc">
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button"><i class="fa fa-star" aria-hidden="true"></i> recommend</a>
-      <a class="btn btn-stim btn-sm" href="#" role="button" style="color:#c6c6c6"> SKIP</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="ban"
+      data-toggle="tooltip" title="If you choose to BAN this submission, it will NOT appear in the news group"><i class="fa fa-ban" aria-hidden="true"></i> ban story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="demote"
+      data-toggle="tooltip" title="If you choose to DEMOTE this submissionm it will still appear in the news group but be demoted so that less users will see it; it will appear with a warning, indicating that a curator considers it problematic"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> allow+demote</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="allow"
+      data-toggle="tooltip" title="If you choose to ALLOW this story, it will appear in the news group for users to read and discuss"><i class="fa fa-check" aria-hidden="true"></i> allow story</a>
+      <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="promote"
+      data-toggle="tooltip" title="If you choose to PROMOTE this story, it will appear in the news group and be promoted so that more users will see it; it will appear with a star, indicating that a curator recommends it"><i class="fa fa-star" aria-hidden="true"></i> allow+promote</a>
+        <a class="btn btn-modresp btn-sm" href="#" role="button" data-resp="pass" style="color:#c6c6c6"
+        data-toggle="tooltip" title="If you choose to SKIP this submission, it will handled by another curator"> SKIP</a>
     </div>
 
 </script>
+
 
 <script id="fc1-template" type="text/x-handlebars-template">
       <div class={{veracity}}>
@@ -169,6 +179,17 @@
         Fact-checking services provide no information regarding the veracity of this story.
       <br />
     </div>
+</script>
+
+<script id="fc3-template" type="text/x-handlebars-template">
+      <div class={{veracity}}>
+        Fact-checking services classify this story as being <b>{{checkdisp}}</b>. Would you like to change your response?
+      </div>
+      <br />
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-dismiss" data-resp="no">Yes, keep my response and proceed</button>
+        <button type="button" class="btn btn-primary btn-dismiss" data-resp="yes">No, return to response options</button>
+      </div>
 </script>
 
 <script id="headlines-template" type="text/x-handlebars-template">
@@ -264,6 +285,25 @@
                   <img src='imgs/rolling.svg' style="width:5em"/>
                 </div>
                 <div id="fcfb" class="undercover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fc3-dialog" class="modal fade in undercover" tabindex="-1" style="display: block;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close btn-dismiss" data-dismiss="modal" aria-hidden="true">×</button>
+              </div>
+              <div class="modal-body">
+                <div class="true">
+                </div>
+                <br />
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn btn-change-no" data-resp="no">Yes, keep my response and proceed</button>
+                  <button type="button" class="btn btn-primary btn btn-change-yes" data-resp="yes">No, return to choose another response</button>
                 </div>
               </div>
             </div>

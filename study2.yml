@@ -1,0 +1,686 @@
+stim:
+  stories:
+     -
+      id: 4
+      type: CF
+      keyword: gun
+      veracity: false
+      title: "A longtime anti-gun state legislator shot a home intruder in defense of his property"
+     -
+      id: 18
+      type: CF
+      keyword: economy
+      veracity: false
+      title: "Our economy is much stronger now than 10 years ago. Nearly 15 million new private-sector jobs"
+     -
+      id: 23
+      type: CF
+      keyword: gov
+      veracity: false
+      title: "The last time that a Senate of a different party than the president in the White House confirmed a Supreme Court nominee was 1888."
+     -
+      id: 25
+      type: CF
+      keyword: social
+      veracity: false
+      title: "53% of Americans disapprove of Obamacare."
+     -
+      id: 27
+      type: CF
+      keyword: military
+      veracity: false
+      title: "China is going to have twice the number of submarines we have in just over a decade."
+     -
+      id: 30
+      type: CF
+      keyword: gun
+      veracity: false
+      title: "Under the current procedure, if someone on a terror watch list tries to buy a gun, authorities are always notified"
+     -
+      id: 34
+      type: CF
+      keyword: drug
+      veracity: false
+      title: "Drug overdoses are the No. 1 form of accidental death in the U.S."
+     -
+      id: 50
+      type: CF
+      keyword: pc
+      veracity:  false
+      title: "Harvard students plan graduation ceremony for blacks only, claim it’s ‘not about segregation’"
+     -
+      id: 52
+      type: CF
+      keyword: people
+      veracity: false
+      title: "Teacher arrested for stapling a “loudmouth” student's lips shut"
+     -
+      id: 53
+      type: CF
+      keyword: climate
+      veracity: false
+      title: "Legislative time bomb: There is no consensus about humain -induced climate change"
+     -
+      id: 79
+      type: CF
+      keyword: immigration
+      veracity:  false
+      title: "Fury over Syrian refugee claiming $392,000 for 4 wives and 22 kids, pleads he can't work due to 'family commitments'"
+     -
+      id: 0
+      type: CT
+      keyword: climate
+      veracity: true
+      title: "Department of Natural Resources Censors All Climate Change Info: Key facts and scientific consensus on climate change and Great Lakes removed."
+     -
+      id: 1
+      type: CT
+      keyword: climate
+      veracity: true
+      title: "WhiteHouse.gov web site removes the terms 'LGBT' and 'climate change'"
+     -
+      id: 7
+      type: CT
+      keyword: gun
+      veracity: true
+      title: "A school shooter in Mississippi was stopped by an assistant principal with a gun"
+     -
+      id: 12
+      type: CT
+      keyword: gun
+      veracity: true
+      title: "Last year, 244 suspected terrorists walked into gun shops and attempted to purchase a firearm; 223 were able to get the firearm."
+     -
+      id: 35
+      type: CT
+      keyword: gov
+      veracity: true
+      title: "Could Trump be better for the Middle East than Obama? Don’t rule it out yet"
+     -
+      id: 36
+      type: CT
+      keyword: crime
+      veracity: true
+      title: "Homicides last year increased by the largest amount in 25 years."
+     -
+      id: 38
+      type: CT
+      keyword: gov
+      veracity: true
+      title: "Every Republican Senate candidate has now announced whether or not they support the Senate taking up the Supreme Court vacancy."
+     -
+      id: 40
+      type: CT
+      keyword: police
+      veracity: true
+      title: "After the shootings of Dallas policemen, nearly 500 people apply to the Dallas Police Department in 12 days"
+     -
+      id: 63
+      type: CT
+      keyword: news
+      veracity: true
+      title: "How ATM skimmers can steal your credit card info without you knowing it"
+     -
+      id: 86
+      type: CT
+      keyword: trump
+      veracity: true
+      title: "Trump wants Senate rules changed to speed up health care, tax legislation"
+     -
+      id: 94
+      type: CT
+      keyword: immigration
+      veracity: true
+      title: "Majorities in Europe, North America worried about Islamic extremism"
+     -
+      id: 112
+      type: CT
+      keyword: clinton
+      veracity: true
+      title: "'Prison labor excerpt from Hillary Clinton's 1996 book resurfaces, shocks supporters"
+     -
+      id: 5
+      type: LF
+      keyword:
+      veracity: false
+      title: "New executive order limiting Americans to ownership of three guns each"
+     -
+      id: 6
+      type: LF
+      keyword: gun
+      veracity: false
+      title: "The National Rifle Association (NRA) bans the carrying of guns from their own national convention"
+     -
+      id: 21
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "Undocumented immigrants pay $12 billion a year into Social Security."
+     -
+      id: 24
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "We admit about 100,000 permanent immigrants from the Middle East every year."
+     -
+      id: 28
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "The 2013 immigration bill expanded President Obama’s ability to bring Syrian refugees to this country without mandating any meaningful background checks."
+     -
+      id: 33
+      type: LF
+      keyword: abortion
+      veracity: false
+      title: "One in three American women will have had an abortion by the time she reaches the age of 45."
+     -
+      id: 78
+      type: LF
+      keyword: trump
+      veracity: false
+      title: "Trump Says Americans Have “No Right” to Protest Him. TYRANNY."
+     -
+      id: 83
+      type: LF
+      keyword: environment
+      veracity: false
+      title: "Researchers Accidentally Find Simple Way to Convert Harmful CO2 Gas to Green Energy"
+     -
+      id: 95
+      type: LF
+      keyword: trump
+      veracity: false
+      title: "The Senate Used 46 Staffers To Investigate Benghazi, But Is Using Just 7 For Trump/Russia"
+     -
+      id: 96
+      type: LF
+      keyword: trump
+      veracity: false
+      title: "Trump Is Giving A $4 Billion Tax Cut To His Kids As He Takes Away Health Care From Millions"
+     -
+      id: 101
+      type: LF
+      keyword: lgbt
+      veracity: false
+      title: "“The Walking Dead” Vows to Leave Georgia if Republicans Pass Anti-LGBT Law"
+     -
+      id: 102
+      type: LF
+      keyword: immigration
+      veracity: false
+      title: "Muslims Just Donated 30,000 Bottles Of Water To Victims Of Michigan Poisoning"
+
+     -
+      id: 14
+      type: LT
+      keyword: true
+      veracity: true
+      title: "Ninety percent of Americans want our background check system strengthened and expanded to cover more gun sales."
+     -
+      id: 17
+      type: LT
+      keyword: social
+      veracity: true
+      title: "The European Commission is preparing to rule in the next few weeks on whether Apple owes the Irish government billions in underpaid taxes."
+     -
+      id: 41
+      type: LT
+      keyword: immigration
+      veracity: true
+      title: "In 2015, 45 percent of the children refugees came from just two countries: Syria and Afghanistan"
+     -
+      id: 43
+      type: LT
+      keyword: tech
+      veracity: true
+      title: "EU states approve plans to make social media firms tackle hate speech"
+     -
+      id: 49
+      type: LT
+      keyword: immigration
+      veracity: true
+      title: "The ACLU issues a “travel advisory” for Texas after the state bans sanctuary cities"
+     -
+      id: 54
+      type: LT
+      keyword: social
+      veracity: true
+      title: "Canada, Norway, and Germany offer federally paid family leave programs for up  to 1 year"
+     -
+      id: 59
+      type: LT
+      keyword: LTtrump
+      veracity: true
+      title: "Appeals court refuses to reinstate Trump's travel ban"
+     -
+      id: 61
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "President Trump Says His Trip Saved 'Millions of Jobs.' That's Not True"
+     -
+      id: 64
+      type: LT
+      keyword: news
+      veracity: true
+      title: "Little Mermaid statue in Denmark painted red in whale-hunting protest"
+     -
+      id: 71
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "Allies distance themselves from U.S. after Trump's first foreign trip"
+     -
+      id: 85
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "Trump tweets Russia 'laughing' about US probe into election meddling"
+     -
+      id: 111
+      type: LT
+      keyword: trump
+      veracity: true
+      title: "How Donald Trump Shifted Kids-Cancer Charity Money Into His Business"
+     -
+      id: 44
+      type: NF
+      keyword: tech
+      veracity: false
+      title: "Samsung Pays Apple $1 Billion Sending 30 Trucks Full of 5 Cents Coins"
+     -
+      id: 45
+      type: NF
+      keyword: people
+      veracity: false
+      title: "Columbus, Ohio School Teacher Loses Eye After Fidget Spinner Breaks In Classroom"
+     -
+      id: 48
+      type: NF
+      keyword: health
+      veracity: false
+      title: "Doctors warn: If you use aluminum foil, stop it or face deadly consequences"
+     -
+      id: 76
+      type: NF
+      keyword: health
+      veracity: false
+      title: "Sour Honey shown to demolish breast cancer cells on the spot"
+     -
+      id: 82
+      type: NF
+      keyword: environment
+      veracity: false
+      title: "Mankind destroys animal kingdom with enormous velocity"
+     -
+      id: 92
+      type: NF
+      keyword: celeb
+      veracity: false
+      title: "Hip-hop and pop star Nelly arrested on drug charges this year."
+     -
+      id: 106
+      type: NF
+      keyword: tv
+      veracity: false
+      title: "Prepare To Freak Out! Netflix Is Going To Stream Every Single Disney Movie"
+     -
+      id: 107
+      type: NF
+      keyword: film
+      veracity: false
+      title: "Saving Private Ryan To Be Remade With All-Female Cast"
+     -
+      id: 42
+      type: NT
+      keyword: people
+      veracity: true
+      title: "A Florida woman is suing the United Sons of Confederate Veterans after a camel attacked her as she was touring the last home of Confederate president Jefferson Davis."
+     -
+      id: 46
+      type: NT
+      keyword: sports
+      veracity: true
+      title: "D’Angelo Russell to be banned from the NBA for disregarding player privacy"
+     -
+      id: 60
+      type: NT
+      keyword: people
+      veracity: true
+      title: "9-Year-Old Girl Sells Lemonade to Stop Her Local Library From Closing"
+     -
+      id: 62
+      type: NT
+      keyword: news
+      veracity: true
+      title: "Lebanese ministry calls for ban on “Wonder Woman”"
+     -
+      id: 66
+      type: NT
+      keyword: entertainment
+      veracity: true
+      title: "Michael J. Fox is back as Marty McFly, in LEGO form"
+     -
+      id: 68
+      type: NT
+      keyword: entertainment
+      veracity: true
+      title: "Miss USA's ideas on feminism divides fans"
+     -
+      id: 81
+      type: NT
+      keyword: environment
+      veracity: true
+      title: "Brazil to release a strain of mutant GM mosquitoes"
+     -
+      id: 88
+      type: NT
+      keyword: genetics
+      veracity: true
+      title: "Top geneticist working on technique to 'cheat death'"
+     -
+      id: 90
+      type: NT
+      keyword: animals
+      veracity: true
+      title: "See-through frog has heart you can see beating through its chest"
+     -
+      id: 91
+      type: NT
+      keyword: health
+      veracity: true
+      title: "Gene tweak in gut bacteria could turn faeces blue if you’re ill"
+  sources:
+      - LifeNews
+      - NationNews
+      - NYmeta
+      - PolicyReview
+      - TheCivillian
+      - InfoPoint
+      - USANews
+      - DailyTime
+      - WashingtonExaminer
+      - WorldDaily
+      - YourNewsWire
+      - Feedly
+      - WealthWire
+      - USLifeToday
+      - WorldTimes
+      - TheWashingtonPress
+      - FreePress
+      - TimesOfTheWorld
+      - WorldStyle
+      - PeoplesVoice
+      - NewsCube
+      - DailyCurrent
+      - DailyNews
+      - ABCNews
+      - Disclose
+      - EmpireHerald
+      - MSNBC
+      - NationalReport
+      - News Biscuit
+      - TheBostonTribune
+      - NewsNerd
+      - WND
+      - WorldNews
+      - WorldTruth
+      - USAPremier
+      - Chronicle
+      - CBSNews
+      - CityJournal
+      - DailyNewsbin
+      - Daily USA Update
+      - GlobalEconomicAnalysis
+      - GlobalPoliticsNow
+  dates:
+      - Jan 2016
+      - Feb 2016
+      - Mar 2016
+      - Apr 2016
+      - May 2016
+      - Jun 2016
+      - Jul 2016
+      - Aug 2016
+      - Sep 2016
+      - Oct 2016
+      - Nov 2016
+      - Dec 2016
+      - Jan 2017
+      - Feb 2017
+      - Mar 2017
+      - Apr 2017
+      - May 2017
+settings:
+  endredirect: "https://kmrc.qualtrics.com/jfe/form/SV_0ooCej3oKGWksAJ?pnid="
+  server:
+    remote_adr: "https://janmatthis.de/v1"
+    collection: "misinfotest"
+    collectiontest: "misinfotest"
+instr:
+  debriefing:
+      id: 'debrief'
+      text1: 'You are almost done. Please press submit to record your responses and be forwarded to a survey with a couple of final questions. If you see a warning asking you to confirm your action, select Leave.'
+      retractdata: '<b>rdcode</b>'
+      platform:
+        -
+          id: 'Prolific'
+          code: 'Please press the SUBMIT button below to be redirected to Prolific.'
+        -
+          id: 'Mturk'
+          code: '<b>aaamt</b>'
+  consent: >
+    <h1>Welcome!</h1>
+    <br>
+    <p>"Researchers at the University of Bath are exploring individual differences in how people respond to information that they are shown. In this survey you will be asked to evaluate some information that we will use in upcoming studies. This survey should take approximately 20 minutes to complete.
+    <br>
+    You must be over 18 to participate. You are under no obligation to complete this questionnaire and you may stop at any time or choose not to answer a particular question without giving a reason why. Your responses are confidential.
+    <br>
+    Your responses will be used in university research reports, conference presentations and journal publications. However, you will not be personally identifiable and your responses will not be linked to you in any way.
+    <br>
+    If you have any questions about this research, please contact the researcher before completing this questionnaire: Dr Emma Williams, University of Bath, UK (al2017@bath.ac.uk).
+    <br>
+    I agree to participate under the conditions stated above." <br>
+    </p>
+blocks:
+  -
+    id: headlines
+    each: true
+    stimT: 1
+    randomized: true
+    stim: stories
+    stimlayout: headlines
+    instr: >
+        <span style="font-size:1.2em;font-weight:400">Hello, welcome aboard!</span>
+        <br><br>
+        You are about to help us curate NEWSMORE. We appreciate your effort.
+        <br><br>
+        Here is a brief overview of what comes next: You will see different news headlines. The topics might vary greatly and this is fine -- NEWSMORE users have various interests. The sources and dates you see below the headlines might refer to sites on which the stories were encountered and not to the original sources. Don't worry too much about these.
+        <br><br>
+        For each story, you can take one of the following actions:
+        <div style="font-size:0.85em">
+        <i class="fa fa-ban" aria-hidden="true"></i><span style="font-weight:400"> BAN STORY</span> The submission will NOT appear in the news group<br>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span style="font-weight:400"> ALLOW+DEMOTE</span> The submission will appear in the group, but be demoted so that less users will see it; it will appear with a warning, indicating that a curator considers it problematic<br>
+        <i class="fa fa-check" aria-hidden="true"></i><span style="font-weight:400"> ALLOW STORY</span> The submission will become available for users to read and share<br>
+        <i class="fa fa-star" aria-hidden="true"></i><span style="font-weight:400"> ALLOW+PROMOTE</span>  The submission will be promoted so that more users will see it; it will appear with a star, indicating that a curator recommends it<br>
+        <span style="font-weight:400">SKIP</span> If completely uncertain, you can skip the submission and pass it on to another curator
+        </div>
+        <br>
+        We are ready whenever you are, just press NEXT!
+
+    qinstr: >
+          Based on this headline, to what extent do you expect this story to be...
+    qs:
+        -
+          text: 'credible:'
+          lab: 'credible'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very credible
+            -
+              val: 2
+              lab: Credible
+            -
+              val: 3
+              lab: Moderately credible
+            -
+              val: 4
+              lab: Not particularly credible
+            -
+              val: 5
+              lab: Not at all credible
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'relevant:'
+          lab: 'relevant'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very relevant
+            -
+              val: 2
+              lab: Relevant
+            -
+              val: 3
+              lab: Moderately relevant
+            -
+              val: 4
+              lab: Not particularly relevant
+            -
+              val: 5
+              lab: Not at all relevant
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'entertaining:'
+          lab: 'entertaining'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very entertaining
+            -
+              val: 2
+              lab: Entertaining
+            -
+              val: 3
+              lab: Moderately entertaining
+            -
+              val: 4
+              lab: Not particularly entertaining
+            -
+              val: 5
+              lab: Not at all entertaining
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'interesting:'
+          lab: 'interesting'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very interesting
+            -
+              val: 2
+              lab: Interesting
+            -
+              val: 3
+              lab: Moderately interesting
+            -
+              val: 4
+              lab: Not particularly interesting
+            -
+              val: 5
+              lab: Not at all interesting
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'How much would you expect this story to appeal to people with liberal views?'
+          lab: 'appeallib'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very appealing to people with liberal views
+            -
+              val: 2
+              lab: Appealing to people with liberal views
+            -
+              val: 3
+              lab: Moderately appealing to people with liberal views
+            -
+              val: 4
+              lab: Not particularly appealing to people with liberal views
+            -
+              val: 5
+              lab: Not at all appealing to people with liberal views
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'How much would you expect this story to appeal to people with conservative views?'
+          lab: 'appealcon'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Very appealing to people with conservative views
+            -
+              val: 2
+              lab: Appealing to people with conservative views
+            -
+              val: 3
+              lab: Moderately appealing to people with conservative views
+            -
+              val: 4
+              lab: Not particularly appealing to people with conservative views
+            -
+              val: 5
+              lab: Not at all appealing to people with conservative views
+            -
+              val: 99
+              lab: Absolutely not able to judge
+        -
+          text: 'Do you think this story is likely to be factually correct?'
+          lab: 'fake'
+          options:
+            -
+              val: 55
+              lab: Please select...
+            -
+              val: 1
+              lab: Definitely correct
+            -
+              val: 2
+              lab: Likely correct
+            -
+              val: 3
+              lab: Likely fake
+            -
+              val: 4
+              lab: Definitely fake
+            -
+              val: 99
+              lab: Absolutely not able to judge
